@@ -3,7 +3,7 @@
 /* Navigation Menu */
 
 nav{
-    float: right;
+    float: left;
 }
 
 nav ul li{
@@ -14,4 +14,20 @@ nav ul li{
 nav ul li a{
     display: block;
     padding: 7px 12px;
+}
+
+/*	Maincontent*/
+
+#main-container{		/*	a	wrapperforallpage	content*/
+    width:	980px;
+    margin:	0	auto;
+}
+
+div#main{
+    clear:	both;
+}
+/* Footer */
+footer {
+    background: #eee;
+    height: 20px;
 }
