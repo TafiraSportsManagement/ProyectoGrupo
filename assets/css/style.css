@@ -1,11 +1,20 @@
+/*------------TODOS LOS ID----------- */
 #main-container{
     /*CONTENEDOR PRINCIPAL*/
+    width: 1080px;
+    margin: 15px auto;
+    text-align: left;
 }
 #logo{
     /*LOGO IMAGEN DE LA PAGINA*/
+    background: #FFFBB6;
+    border: 2px solid #999999;
+    padding: 20px;
 }
 #top-nav{
     /*NAVEGADOR DE LOGIN*/
+    background: #FFFBB6;
+    padding: 5px 15px;
 }
 #login{
     /*CONTENEDOR DEL LOGIN*/
@@ -15,6 +24,7 @@
 }
 #login-form{
     /*FORMULARIO DEL LOGIN*/
+
 }
 #login-submit{
     /*FORMULARIO DEL SUBMIT*/
@@ -24,17 +34,58 @@
 }
 #top-menu-items{
     /*NAVEGADOR DE LOS ITEMS*/
-
+    display: inline-block;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
 }
 #main{
     /*CONTENEDOR PRINCIPAL*/
+    float: left;
+    width: 660px;
+    margin: 20px
+
 }
 #main-top-section{
     /*CONTENEDOR PRINCIPAL SUPERIOR*/
+    float: left;
+    align-content: center;
+    width: 220px;
+    margin: 20px 0px;
+    padding: 20px;
+    background: #CCCCCC;
 }
 #main-bottom-section{
     /*CONTENEDOR PRINCIPAL INFERIOR*/
+    float: right;
+    align-content: center;
+    width: 220px;
+    margin: 20px 20px;
+    padding: 20px;
+    background: #CCCCCC;
+}
+
+#aside-div{
+    float: left;
+    align-content: left;
+    width: 220px;
+    margin: 20px 20px;
+    padding: 20px;
+    background: #CCCCCC;
 }
 #temp-proyect-name-container{
     /*FOOTTER*/
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #999999;
+}
+
+/*------------ TODOS LOS STYLES INTERNOS ----------- */
+
+header,section,footer,aside,nav,article,
+figure,figcaption,hgroup{
+    display: block;
+}
+body{
+    text-align: center;
 }
