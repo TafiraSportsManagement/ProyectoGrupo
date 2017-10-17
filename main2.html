@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”keywords” content=”HTML5,CSS3,Javascript”>
+    <title>Tienda de deportes</title>
+
+    <link rel="stylesheet" href="resources/css/estilos.css">
+    <script src="resources/js/utilidades.js"></script>
+</head>
+
+<body>
+
+<header id="header">
+    <div id="logo">
+        <!-- TODO: aqui debería ir el logo de la tienda si lo tuviera -->
+        <img src="resources/imagenes/logo.png" />
+    </div>
+
+    <h1>Tienda de deportes</h1>
+
+    <div id="busqueda">
+        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
+        <input type="search" placeholder="Buscar en ..." />
+    </div>
+
+    <div id="carrito">
+        <img src="resources/imagenes/carrito.png"/>
+        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
+    </div>
+
+    <div id="login">
+        <img src="resources/imagenes/iconUser.png"/>
+        <br/>
+        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+        <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
+        <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
+    </div>
+
+    <hr/>
+</header>
+
+<nav id="menu">
+    <ul>
+        <li>Deportes</li>
+        <li>Marcas</li>
+        <li>Hombre</li>
+        <li>Mujer</li>
+        <li>Niños</li>
+        <li>Novedades</li>
+    </ul>
+</nav>
+
+
+<section id="seccionLogin" hidden>
+
+    <form id="formLogin">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" type="text" placeholder="usuario"/>
+        <br/>
+        <label for="contraseña">Contraseña</label>
+        <input id="contraseña" type="password" />
+
+        <br/>
+        <div id="registrarUsuario" hidden>
+            <label for="repContraseña">Repetir contraseña</label>
+            <input id="repContraseña" type="password"/>
+            <br/>
+
+            <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
+        </div>
+
+        <input id="submitFormLogin" type="submit" value="Aceptar" />
+    </form>
+
+</section>
+
+
+
+<section id="seccionContenedores">
+
+    <div id="contenedorImagenes">
+        <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
+        <img id="img_material" src="resources/imagenes/material_1.jpg" />
+    </div>
+
+    <div id="contenedorMapa">
+
+    </div>
+
+    <div id="contenedorVideo">
+        <video controls poster="resources/media/intro.jpg" width="390px" height="240" preload="metadata">
+            <source src="resources/media/intro.mp4" type="video/mp4">
+            <source src="resources/media/intro.webm" type="video/webm">
+            <p>Lo siento, su navegador no soporta video</p>
+        </video>
+        <h3 ><output id="tituloVideo" content=""></output></h3>
+    </div>
+
+</section>
+
+
+<section id="seccionSeleccion" hidden>
+
+    <form id="formSeleccion">
+
+        <input list= "deportes" name= "deporte">
+        <datalist id= "deportes">
+            <option value= "Futbol">
+            <option value= "Tenis">
+            <option value= "Atletismo">
+            <option value= "Natacion">
+            <option value= "Montañismo">
+            <option value= "...">
+        </datalist>
+        <br/>
+        <input list="marcas" name= "marca">
+        <datalist id= "marcas">
+            <option value= "Futbol">
+            <option value= "Tenis">
+            <option value= "Atletismo">
+            <option value= "Natacion">
+            <option value= "Montañismo">
+            <option value= "...">
+        </datalist>
+        <br/>
+
+
+        <input id="submitFormSeleccion" type="submit" value="Aceptar" />
+    </form>
+
+</section>
+
+
+<footer>
+    <hr/>
+
+    <ul>
+        <li><a href="javascript:void(0)">Quienes somos</a></li>
+        <li><a href="javascript:void(0)">Contacto</a></li>
+        <li><a href="javascript:void(0)">FAQ</a></li>
+
+        <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
+    </ul>
+</footer>
+
+</body>
+</html>
