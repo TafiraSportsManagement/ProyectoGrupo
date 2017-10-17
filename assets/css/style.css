@@ -1,47 +1,40 @@
-
-
-/* Navigation Menu */
-
-nav{
-    float: left;
+#main-container{
+    /*CONTENEDOR PRINCIPAL*/
 }
-
-nav ul li{
-    list-style: none;
-    float: left;
+#logo{
+    /*LOGO IMAGEN DE LA PAGINA*/
 }
-
-nav ul li a{
-    display: block;
-    padding: 7px 12px;
+#top-nav{
+    /*NAVEGADOR DE LOGIN*/
 }
-
-/*	Maincontent*/
-
-#main-container{		/*	a	wrapperforallpage	content*/
-    width:	980px;
-    margin:	0	auto;
+#login{
+    /*CONTENEDOR DEL LOGIN*/
 }
-
-div#main{
-    clear:	both;
+#authorized{
+    /*AUTORIZACION*/
 }
-/* Footer */
-footer {
-    background: #eee;
-    height: 20px;
+#login-form{
+    /*FORMULARIO DEL LOGIN*/
 }
+#login-submit{
+    /*FORMULARIO DEL SUBMIT*/
+}
+#login-link{
+    /*ESTILO DEL LOGIN*/
+}
+#top-menu-items{
+    /*NAVEGADOR DE LOS ITEMS*/
 
+}
+#main{
+    /*CONTENEDOR PRINCIPAL*/
+}
 #main-top-section{
-    width: 100%;
-    height: 320px;
-    margin-top:	18px;
+    /*CONTENEDOR PRINCIPAL SUPERIOR*/
 }
-li#logininput	{
-    width: 122px;
-    padding: 4px;
-    border:	1px	solid #ddd;
-    border-radius: 2px;
-    -moz-border-radius:	2px;
-    -webkit-border-radius:	2px;
+#main-bottom-section{
+    /*CONTENEDOR PRINCIPAL INFERIOR*/
+}
+#temp-proyect-name-container{
+    /*FOOTTER*/
 }
