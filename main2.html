@@ -9,7 +9,7 @@
     <script src="resources/js/utilidades.js"></script>
 </head>
 
-<body>
+<body id="main-container">
 
 <header id="header">
     <div id="logo">
@@ -17,8 +17,17 @@
         <img src="resources/imagenes/logo.png" />
     </div>
 
-    <h1>Tienda de deportes</h1>
-
+    <h1 id="titulo">Tienda de deportes</h1>
+    <nav>
+        <ul>
+            <li><a>Deportes</a></li>
+            <li><a>Marcas</a></li>
+            <li><a>Hombre</a></li>
+            <li><a>Mujer</a></li>
+            <li><a>Niños</a></li>
+            <li><a>Novedades</a></li>
+        </ul>
+    </nav>
     <div id="busqueda">
         <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
@@ -39,18 +48,6 @@
 
     <hr/>
 </header>
-
-<nav id="menu">
-    <ul>
-        <li>Deportes</li>
-        <li>Marcas</li>
-        <li>Hombre</li>
-        <li>Mujer</li>
-        <li>Niños</li>
-        <li>Novedades</li>
-    </ul>
-</nav>
-
 
 <section id="seccionLogin" hidden>
 
