@@ -9,7 +9,36 @@
     <body>
     <div id="main-container">
         <header>
-            <h1>Titulo del sitio</h1>
+            <h1 id="logo">
+                <a>Titulo del sitio</a>
+            </h1>
+            <nav id="top-nav">
+                <ul>
+                    <li id="login">
+                        <div id="authorized">
+                            <span class="icon-user authorized-icon"></span>
+                            <span id="user-authorized">admin</span>
+                        </br>
+                            <a id="profile-link">profile</a>
+                            <a id="logout-link">logout</a>
+                        </div>
+                        <form id="login-form">
+                            <span class="icon-user login-form-icons"></span>
+                            <input id="username" name="username" type="text"
+                                   placeholder="username" autocomplete="off" /> &nbsp;
+                            <span class="icon-locked login-form-icons"></span>
+                            <input id="password" name="password" type="password"
+                            placeholder="password"/>
+                            <form>
+                                <a id="login-submit">login &nbsp;
+                                    <span class="icon-enter"></span> </a>
+                                <div id="login-link" class="show-form">login &nbsp;
+                                    <span class="icon-enter"></span>
+                                </div>
+                            </form>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <nav>
         <ul>
