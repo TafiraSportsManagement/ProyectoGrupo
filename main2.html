@@ -18,36 +18,37 @@
     </div>
 
     <h1 id="titulo">Tienda de deportes</h1>
+
     <nav>
-        <div id="busqueda">
-            <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
-            <input type="search" placeholder="Buscar en ..." />
+        <div id="login">
+            <img src="resources/imagenes/iconUser.png"/>
+            <br/>
+            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+            <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
+            <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
         </div>
-        <ul>
-            <li><a>Deportes</a></li>
-            <li><a>Marcas</a></li>
-            <li><a>Hombre</a></li>
-            <li><a>Mujer</a></li>
-            <li><a>Niños</a></li>
-            <li><a>Novedades</a></li>
-        </ul>
     </nav>
 
+    <ul>
+        <li><a>Deportes</a></li>
+        <li><a>Marcas</a></li>
+        <li><a>Hombre</a></li>
+        <li><a>Mujer</a></li>
+        <li><a>Niños</a></li>
+        <li><a>Novedades</a></li>
+    </ul>
+
+    <div id="busqueda">
+        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
+        <input type="search" placeholder="Buscar en ..." />
+    </div>
 
     <div id="carrito">
         <img src="resources/imagenes/carrito.png"/>
         <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
     </div>
+    <hr>
 
-    <div id="login">
-        <img src="resources/imagenes/iconUser.png"/>
-        <br/>
-        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-        <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
-        <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
-    </div>
-
-    <hr/>
 </header>
 
 <section id="seccionLogin" hidden>

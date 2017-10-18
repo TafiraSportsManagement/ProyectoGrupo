@@ -23,6 +23,7 @@
 
 #login{
     /*CONTENEDOR DEL LOGIN*/
+    float: right;
 }
 #authorized{
     /*AUTORIZACION*/
@@ -32,8 +33,9 @@
     align: top;
 
 }
-#login-submit{
+#seccionLogin{
     /*FORMULARIO DEL SUBMIT*/
+    float: right;
 }
 #login-link{
     /*ESTILO DEL LOGIN*/
@@ -80,7 +82,11 @@
     border-top: 2px solid #999999;
 }
 #busqueda{
-    float: center;
+    float: left;
+}
+
+#barraBusqueda{
+    float: right;
 }
 
 /*------------ TODOS LOS STYLES INTERNOS ----------- */
@@ -95,7 +101,7 @@ body{
 
 div{
     width: 100px;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -104,8 +110,8 @@ div{
 
 ul{
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 10px;
     overflow: hidden;
 }
 li{
@@ -119,6 +125,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+
 }
 
 li a:hover {
