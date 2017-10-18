@@ -19,24 +19,13 @@
 
     <h1 id="titulo">Tienda de deportes</h1>
 
-    <nav>
-        <div id="login">
-            <img src="assets/imagenes/iconUser.png"/>
-            <br/>
-            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-            <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
-            <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
-        </div>
-    </nav>
-
-    <ul>
-        <li><a>Deportes</a></li>
-        <li><a>Marcas</a></li>
-        <li><a>Hombre</a></li>
-        <li><a>Mujer</a></li>
-        <li><a>Niños</a></li>
-        <li><a>Novedades</a></li>
-    </ul>
+    <div id="login">
+        <img src="assets/imagenes/iconUser.png"/>
+        <br/>
+        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+        <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
+        <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
+    </div>
 
     <div id="busqueda">
         <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
@@ -50,6 +39,30 @@
     <hr>
 
 </header>
+
+<nav id="navegacion_principal">
+
+    <ul>
+        <li><a>Deportes</a></li>
+        <li><a>Marcas</a></li>
+        <li><a>Hombre</a></li>
+        <li><a>Mujer</a></li>
+        <li><a>Niños</a></li>
+        <li><a>Novedades</a></li>
+    </ul>
+
+</nav>
+
+<nav id="navegacion_secundaria">
+    <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
+
+    <ul>
+        <li></li>
+        <li></li>
+
+    </ul>
+
+</nav>
 
 <section id="seccionLogin" hidden>
 
