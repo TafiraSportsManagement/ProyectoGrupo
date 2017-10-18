@@ -6,7 +6,7 @@
     <title>Tienda de deportes</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="resources/js/utilidades.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body id="main-container">
@@ -14,14 +14,14 @@
 <header id="header">
     <div id="logo">
         <!-- TODO: aqui debería ir el logo de la tienda si lo tuviera -->
-        <img src="resources/imagenes/logo.png" />
+        <img src="assets/imagenes/logo.png" />
     </div>
 
     <h1 id="titulo">Tienda de deportes</h1>
 
     <nav>
         <div id="login">
-            <img src="resources/imagenes/iconUser.png"/>
+            <img src="assets/imagenes/iconUser.png"/>
             <br/>
             <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
             <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
@@ -44,7 +44,7 @@
     </div>
 
     <div id="carrito">
-        <img src="resources/imagenes/carrito.png"/>
+        <img src="assets/imagenes/carrito.png"/>
         <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
     </div>
     <hr>
@@ -80,7 +80,7 @@
 
     <div id="contenedorImagenes">
         <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
-        <img id="img_material" src="resources/imagenes/material_1.jpg" />
+        <img id="img_material" src="assets/imagenes/material_1.jpg" />
     </div>
 
     <div id="contenedorMapa">
@@ -88,9 +88,9 @@
     </div>
 
     <div id="contenedorVideo">
-        <video controls poster="resources/media/intro.jpg" width="390px" height="240" preload="metadata">
-            <source src="resources/media/intro.mp4" type="video/mp4">
-            <source src="resources/media/intro.webm" type="video/webm">
+        <video controls poster="assets/media/intro.jpg" width="390px" height="240" preload="metadata">
+            <source src="assets/media/intro.mp4" type="video/mp4">
+            <source src="assets/media/intro.webm" type="video/webm">
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3 ><output id="tituloVideo" content=""></output></h3>
