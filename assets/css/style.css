@@ -37,8 +37,9 @@
     /*FORMULARIO DEL SUBMIT*/
     float: right;
 }
-#login-link{
+#submitFormLogin{
     /*ESTILO DEL LOGIN*/
+    margin: 5px;
 }
 
 #main{
@@ -132,4 +133,9 @@ li a:hover {
     background-color: red;
 }
 
+label{
+    display: block;
+    margin: .5em 0 0 0;
+
+}
 
