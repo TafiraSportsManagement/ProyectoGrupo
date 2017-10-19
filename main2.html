@@ -41,7 +41,6 @@
 </header>
 
 <nav id="navegacion_principal">
-
     <ul>
         <li><a>Deportes</a></li>
         <li><a>Marcas</a></li>
@@ -50,8 +49,30 @@
         <li><a>Niños</a></li>
         <li><a>Novedades</a></li>
     </ul>
-
 </nav>
+
+<section id="seccionLogin" hidden>
+    <fieldset>
+        <form id="formLogin">
+            <label for="usuario">Usuario</label>
+            <input id="usuario" type="text" placeholder="usuario"/>
+            <br/>
+            <label for="contraseña">Contraseña</label>
+            <input id="contraseña" type="password" placeholder="contraseña" />
+
+            <br/>
+            <div id="registrarUsuario" hidden>
+                <label for="repContraseña">Repetir contraseña</label>
+                <input id="repContraseña" type="password"/>
+                <br/>
+
+                <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
+            </div>
+
+            <input id="submitFormLogin" type="submit" value="Aceptar" />
+        </form>
+    </fieldset>
+</section>
 
 <nav id="navegacion_secundaria">
     <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
@@ -59,48 +80,32 @@
     <ul>
         <li></li>
         <li></li>
-
     </ul>
 
 </nav>
 
-<section id="seccionLogin" hidden>
-    <fieldset>
-    <form id="formLogin">
-        <label for="usuario">Usuario</label>
-        <input id="usuario" type="text" placeholder="usuario"/>
-        <br/>
-        <label for="contraseña">Contraseña</label>
-        <input id="contraseña" type="password" placeholder="contraseña" />
+<div id="seccionContenedores">
 
-        <br/>
-        <div id="registrarUsuario" hidden>
-            <label for="repContraseña">Repetir contraseña</label>
-            <input id="repContraseña" type="password"/>
-            <br/>
+    <div class="column" id="contenedorImagenes">
 
-            <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
-        </div>
-
-        <input id="submitFormLogin" type="submit" value="Aceptar" />
-    </form>
-    </fieldset>
-</section>
-
-
-
-<section id="seccionContenedores">
-
-    <div id="contenedorImagenes">
         <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
         <img id="img_material" src="assets/imagenes/material_1.jpg" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+            Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+            Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+            Praesent scelerisque tortor sed accumsan convallis.</p>
     </div>
 
-    <div id="contenedorMapa">
-
+    <div class="column" id="contenedorMapa">
+        <fieldset>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+                Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+                Praesent scelerisque tortor sed accumsan convallis.</p>
+        </fieldset>
     </div>
 
-    <div id="contenedorVideo">
+    <div class="column" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="390px" height="240" preload="metadata">
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
@@ -109,7 +114,7 @@
         <h3 ><output id="tituloVideo" content=""></output></h3>
     </div>
 
-</section>
+</div>
 
 
 <section id="seccionSeleccion" hidden>
