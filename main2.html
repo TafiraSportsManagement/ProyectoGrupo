@@ -6,7 +6,7 @@
     <title>Tienda de deportes</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="resources/js/utilidades.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body id="main-container">
@@ -14,20 +14,33 @@
 <header id="header">
     <div id="logo">
         <!-- TODO: aqui debería ir el logo de la tienda si lo tuviera -->
-        <img src="resources/imagenes/logo.png" />
+        <img src="assets/imagenes/logo.png" />
     </div>
 
     <h1 id="titulo">Tienda de deportes</h1>
 
-    <nav>
-        <div id="login">
-            <img src="resources/imagenes/iconUser.png"/>
-            <br/>
-            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-            <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
-            <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
-        </div>
-    </nav>
+    <div id="login">
+        <img src="assets/imagenes/iconUser.png"/>
+        <br/>
+        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+        <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
+        <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
+    </div>
+
+    <div id="busqueda">
+        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
+        <input type="search" placeholder="Buscar en ..." />
+    </div>
+
+    <div id="carrito">
+        <img src="assets/imagenes/carrito.png"/>
+        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
+    </div>
+    <hr>
+
+</header>
+
+<nav id="navegacion_principal">
 
     <ul>
         <li><a>Deportes</a></li>
@@ -38,18 +51,18 @@
         <li><a>Novedades</a></li>
     </ul>
 
-    <div id="busqueda">
-        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
-        <input type="search" placeholder="Buscar en ..." />
-    </div>
+</nav>
 
-    <div id="carrito">
-        <img src="resources/imagenes/carrito.png"/>
-        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
-    </div>
-    <hr>
+<nav id="navegacion_secundaria">
+    <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
 
-</header>
+    <ul>
+        <li></li>
+        <li></li>
+
+    </ul>
+
+</nav>
 
 <section id="seccionLogin" hidden>
     <fieldset>
@@ -80,7 +93,7 @@
 
     <div id="contenedorImagenes">
         <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
-        <img id="img_material" src="resources/imagenes/material_1.jpg" />
+        <img id="img_material" src="assets/imagenes/material_1.jpg" />
     </div>
 
     <div id="contenedorMapa">
@@ -88,9 +101,9 @@
     </div>
 
     <div id="contenedorVideo">
-        <video controls poster="resources/media/intro.jpg" width="390px" height="240" preload="metadata">
-            <source src="resources/media/intro.mp4" type="video/mp4">
-            <source src="resources/media/intro.webm" type="video/webm">
+        <video controls poster="assets/media/intro.jpg" width="390px" height="240" preload="metadata">
+            <source src="assets/media/intro.mp4" type="video/mp4">
+            <source src="assets/media/intro.webm" type="video/webm">
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3 ><output id="tituloVideo" content=""></output></h3>
@@ -103,7 +116,8 @@
 
     <form id="formSeleccion">
 
-        <input list= "deportes" name= "deporte">
+        <label for="deporte">Deportes</label>
+        <input id="deporte" list= "deportes" name= "deporte">
         <datalist id= "deportes">
             <option value= "Futbol">
             <option value= "Tenis">
@@ -113,7 +127,8 @@
             <option value= "...">
         </datalist>
         <br/>
-        <input list="marcas" name= "marca">
+        <label for="marca">Marca</label>
+        <input id="marca" list="marcas" name= "marca">
         <datalist id= "marcas">
             <option value= "Futbol">
             <option value= "Tenis">
