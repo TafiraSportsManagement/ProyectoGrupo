@@ -6,7 +6,6 @@
     <title>Tienda de deportes</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js"></script>
 </head>
 
 <body id="main-container">
@@ -23,8 +22,8 @@
         <img src="assets/imagenes/iconUser.png"/>
         <br/>
         <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-        <a id="inicio" href="javascript:void(0);" onclick="login();">Inicio</a>&nbsp|&nbsp
-        <a id="registro" href="javascript:void(0);" onclick="login();">Registro</a>
+        <a id="inicio" href="javascript:void(0);" >Inicio</a>&nbsp|&nbsp
+        <a id="registro" href="javascript:void(0);" >Registro</a>
     </div>
 
     <div id="busqueda">
@@ -64,7 +63,7 @@
             <br/>
             <div id="registrarUsuario">
                 <label for="repContraseña">Repetir contraseña</label>
-                <input id="repContraseña" type="password"/>
+                <input id="repContraseña" type="password" placeholder="contraseña" />
                 <br/>
 
                 <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
@@ -163,6 +162,8 @@
         <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
     </ul>
 </footer>
+
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
