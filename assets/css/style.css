@@ -21,6 +21,7 @@
 #seccionLogin{
     /*FORMULARIO DEL SUBMIT*/
     float: right;
+    display: none;
 }
 
 #submitFormLogin{
@@ -51,8 +52,12 @@
     float: right;
 }
 
-#seccionSeleccion{
+#contenedorMapa{
+    float: left;
+}
 
+#seccionSeleccion{
+    display: none;
 }
 
 
