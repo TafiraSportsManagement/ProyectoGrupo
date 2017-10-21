@@ -21,7 +21,7 @@ function mostrarFormularioLogin(event) {
     var elementoFuente = event.target || event.srcElement;
     console.log(elementoFuente);
 
-    if ( elementoFuente.id == "registro" )
+    if ( elementoFuente.id == registro.id )
         registrarUsuario.style.display = "block";
     else
         registrarUsuario.style.display = "none";
