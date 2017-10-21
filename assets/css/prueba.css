@@ -1,8 +1,4 @@
-.header {
-    background-color: #f1f1f1;
-    padding: 10px;
 
-}
 /*-----CABECERA------*/
 
     /*--Titulo--*/
@@ -77,12 +73,6 @@
 }
 
 /*-----FOOTER------*/
-footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-
-}
 
 .botnav {
     overflow: hidden;
@@ -109,4 +99,19 @@ footer {
 .botnav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+/*----ETIQUITAS GLOBALES (TAGS)-----*/
+
+header {
+    background-color: #f1f1f1;
+    padding: 10px;
+
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+
 }
