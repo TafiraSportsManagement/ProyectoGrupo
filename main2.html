@@ -41,12 +41,12 @@
 
 <nav id="navegacion_principal">
     <ul>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Deportes</a></li>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Marcas</a></li>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Hombre</a></li>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Mujer</a></li>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Niños</a></li>
-        <li><a href="javascript:void(0)" class="formularioSeleccion">Novedades</a></li>
+        <li><a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a></li>
+        <li><a id="navMarcas" href="javascript:void(0)" class="">Marcas</a></li>
+        <li><a id="navHombre" href="javascript:void(0)" class="">Hombre</a></li>
+        <li><a id="navMujer" href="javascript:void(0)" class="">Mujer</a></li>
+        <li><a id="navNiños" href="javascript:void(0)" class="">Niños</a></li>
+        <li><a id="navNovedades" href="javascript:void(0)" class="">Novedades</a></li>
     </ul>
 </nav>
 
@@ -142,7 +142,38 @@
             <option value= "...">
         </datalist>
         <br/>
-
+        <label for="hombre">Hombre</label>
+        <input id="hombre" list="actividadesHombre" name= "actividadHombre">
+        <datalist id= "actividadesHombre">
+            <option value= "Indoor">
+            <option value= "Outdoor">
+            <option value= "...">
+        </datalist>
+        <br/>
+        <label for="mujer">Mujer</label>
+        <input id="mujer" list="actividadesMujer" name= "actividadMujer">
+        <datalist id= "actividadesMujer">
+            <option value= "Indoor">
+            <option value= "Outdoor">
+            <option value= "...">
+        </datalist>
+        <br/>
+        <label for="niño">Niño</label>
+        <input id="niño" list="actividadesNiño" name= "actividadNiño">
+            <datalist id= "actividadesNiño">
+            <option value= "Indoor">
+            <option value= "Outdoor">
+            <option value= "...">
+        </datalist>
+        <br/>
+        <label for="novedad">Novedades</label>
+        <input id="novedad" list="novedades" name= "novedad">
+        <datalist id= "novedades">
+            <option value= "Primera">
+            <option value= "Segunda">
+            <option value= "...">
+        </datalist>
+        <br/>
 
         <input id="submitFormSeleccion" type="submit" value="Aceptar" />
         </fieldset>
