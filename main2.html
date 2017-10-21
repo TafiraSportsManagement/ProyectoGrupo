@@ -42,17 +42,18 @@
 
 <nav id="navegacion_principal">
     <ul>
-        <li><a>Deportes</a></li>
-        <li><a>Marcas</a></li>
-        <li><a>Hombre</a></li>
-        <li><a>Mujer</a></li>
-        <li><a>Niños</a></li>
-        <li><a>Novedades</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Deportes</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Marcas</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Hombre</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Mujer</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Niños</a></li>
+        <li><a href="javascript:void(0)" class="formularioSeleccion">Novedades</a></li>
     </ul>
 </nav>
 
-<section id="seccionLogin" hidden>
+<section id="seccionLogin">
     <fieldset>
+        <legend>Login</legend>
         <form id="formLogin">
             <label for="usuario">Usuario</label>
             <input id="usuario" type="text" placeholder="usuario"/>
@@ -61,7 +62,7 @@
             <input id="contraseña" type="password" placeholder="contraseña" />
 
             <br/>
-            <div id="registrarUsuario" hidden>
+            <div id="registrarUsuario">
                 <label for="repContraseña">Repetir contraseña</label>
                 <input id="repContraseña" type="password"/>
                 <br/>
@@ -97,12 +98,10 @@
     </div>
 
     <div class="column" id="contenedorMapa">
-        <fieldset>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
                 Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
                 Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
                 Praesent scelerisque tortor sed accumsan convallis.</p>
-        </fieldset>
     </div>
 
     <div id="contenedorVideo">
@@ -120,7 +119,8 @@
 <section id="seccionSeleccion">
 
     <form id="formSeleccion">
-
+        <fieldset>
+            <legend>Seleccion</legend>
         <label for="deporte">Deportes</label>
         <input id="deporte" list= "deportes" name= "deporte">
         <datalist id= "deportes">
@@ -135,17 +135,18 @@
         <label for="marca">Marca</label>
         <input id="marca" list="marcas" name= "marca">
         <datalist id= "marcas">
-            <option value= "Futbol">
-            <option value= "Tenis">
-            <option value= "Atletismo">
-            <option value= "Natacion">
-            <option value= "Montañismo">
+            <option value= "Nike">
+            <option value= "Adidas">
+            <option value= "Puma">
+            <option value= "Mizuno">
+            <option value= "Asics">
             <option value= "...">
         </datalist>
         <br/>
 
 
         <input id="submitFormSeleccion" type="submit" value="Aceptar" />
+        </fieldset>
     </form>
 
 </section>
