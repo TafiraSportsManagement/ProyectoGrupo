@@ -30,6 +30,7 @@ function mostrarFormularioLogin(event) {
     else
         registrarUsuario.style.display = "none";
 
+    seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
     seccionSeleccion.style.display = "none";
 }
@@ -37,14 +38,14 @@ function mostrarFormularioLogin(event) {
 inicio.addEventListener('click', mostrarFormularioLogin, false);
 
 function mostrarFormularioRegistro(event) {
-    seccionLogin.style.display = "block";
+    seccionRegistro.style.display = "block";
 
-    var elementoFuente = event.target || event.srcElement;
-    if ( elementoFuente.id == registro.id )
+    var elementoFuente1 = event.target || event.srcElement;
+    if ( elementoFuente1.id == registro.id )
         registrarUsuario.style.display = "block";
     else
         registrarUsuario.style.display = "none";
-
+    seccionLogin.style.display = "none";
     seccionContenedores.style.display = "none";
     seccionSeleccion.style.display = "none";
 }
@@ -54,6 +55,7 @@ registro.addEventListener('click', mostrarFormularioRegistro, false);
 
 function mostrarFormularioSeleccion() {
     seccionLogin.style.display = "none";
+    seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
     seccionSeleccion.style.display = "block";
 }
