@@ -57,7 +57,7 @@ function validarFormularioLoginRegistro(event) {
 
     if ( registrarUsuario.style.display == "block" ) {
 
-        var constraseña = document.getElementById('contraseña');
+        var contraseña = document.getElementById('contraseña');
         var repContraseña = document.getElementById('repContraseña');
         if ( contraseña.value != repContraseña.value ) {
             window.alert('ERROR');
