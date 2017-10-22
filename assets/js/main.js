@@ -53,6 +53,8 @@ navNovedades.addEventListener('click', mostrarFormularioSeleccion, false);
 
 function validarFormularioLoginRegistro(event) {
 
+    <!-- console.log("registrarUsuario.style.display: " + registrarUsuario.style.display); -->
+
     if ( registrarUsuario.style.display == "block" ) {
 
         var constraseña = document.getElementById('contraseña');
