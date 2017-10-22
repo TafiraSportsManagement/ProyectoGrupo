@@ -90,10 +90,38 @@
             <div id="registrarUsuario">
                 <label for="repContraseña">Repetir contraseña</label>
                 <input id="repContraseña" type="password" placeholder="repetir contraseña" required />
-                <br/>
-
-                <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
             </div>
+            <br/>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="nombre" required />
+            <br/>
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" type="text" placeholder="text" required />
+            <br/>
+            <label for="teléfono">Teléfono</label>
+            <input id="teléfono" type="text" placeholder="teléfono" required />
+            <br/>
+            <label for="dirección">Dirección</label>
+            <input id="dirección" type="text" placeholder="dirección" required />
+            <br/>
+            <label for="país">País</label>
+            <select id ="país" name="país">
+            <option selected="" value="Default">Selecciona un país</option>
+            <option value="ES">España</option>
+            <option value="AL">Canada</option>
+            <option value="DZ">India</option>
+            <option value="AS">Russia</option>
+            <option value="AD">USA</option>
+            </select>
+            <br/>
+            <label for="códigoPostal">Código Postal</label>
+            <input id="códigoPostal" type="text" placeholder="código postal" required />
+            <br/>
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="email" required />
+            <br/>
+            <br/>
+
 
             <input type="submit" name="submit" value="Aceptar" />
         </form>
