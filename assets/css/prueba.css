@@ -16,7 +16,7 @@
 }
 .login a{
     display: block;
-    align: right;
+    /*align: right; */
     float: right;
     text-align: right;
     padding: 14px 21px;
