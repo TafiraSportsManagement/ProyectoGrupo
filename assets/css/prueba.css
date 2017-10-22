@@ -113,8 +113,10 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .botnav a:hover {
     background-color: #ddd;
