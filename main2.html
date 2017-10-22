@@ -26,8 +26,8 @@
              <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
         </div>
             <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-            <a id="inicio" href="javascript:void(0);" >Inicio</a>
-            <a id="registro" href="javascript:void(0);" >Registro</a>
+            <a id="inicio" href="javascript:void(0);">Inicio</a>
+            <a id="registro" href="javascript:void(0);">Registro</a>
         <div class="carrito-icon">
             <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
             <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
@@ -48,14 +48,13 @@
         <a id="navMujer" href="javascript:void(0)" class="">Mujer</a>
         <a id="navNiños" href="javascript:void(0)" class="">Niños</a>
         <a id="navNovedades" href="javascript:void(0)" class="">Novedades</a>
-
-    <div id="busqueda">
-        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
+   <div class="busqueda">
+       <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
     </div>
 </nav>
 
-<section id="seccionLogin">
+<section class="seccionLogin">
     <fieldset>
         <legend>Login</legend>
         <form id="formLogin">
@@ -82,42 +81,39 @@
 <nav id="navegacion_secundaria">
     <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
 
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
-
 </nav>
 
-<div id="seccionContenedores">
+<section class="row" id="seccionContenedores">
 
-    <div class="column" id="contenedorImagenes">
+    <article class="column middle" id="contenedorImagenes">
 
         <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
-        <img id="img_material" src="assets/imagenes/material_1.jpg" />
+        <!--<img id="img_material" src="assets/imagenes/material_1.jpg" /> -->
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
             Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
             Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-            Praesent scelerisque tortor sed accumsan convallis.</p>
-    </div>
+            Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DE VISUALIZACION
+                DE LAS IMAGENES DE LOS PRODUCTOS</p>
+    </article>
 
-    <div class="column" id="contenedorMapa">
+    <article class="column side" id="contenedorMapa">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
                 Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
                 Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-                Praesent scelerisque tortor sed accumsan convallis.</p>
-    </div>
+                Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DEL MAPA DE LAS TIENDAS
+                </p>
+    </article>
 
-    <div id="contenedorVideo">
-        <video controls poster="assets/media/intro.jpg" width="350px" height="240" preload="metadata">
+    <article class="column side" id="contenedorVideo">
+        <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3><output id="tituloVideo" content=""></output></h3>
-    </div>
+    </article>
 
-</div>
+</section>
 
 
 <section id="seccionSeleccion">
@@ -188,15 +184,17 @@
 
 
 <footer>
-    <hr/>
-
-    <ul>
-        <li><a href="javascript:void(0)">Quienes somos</a></li>
-        <li><a href="javascript:void(0)">Contacto</a></li>
-        <li><a href="javascript:void(0)">FAQ</a></li>
-
+    <nav class="botnav">
+        <a id="primero" href="javascript:void(0)">Quienes somos</a>
+        <a href="javascript:void(0)">Contacto</a>
+        <a href="javascript:void(0)">FAQ</a>
+        <a href="#">Google+</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Youtube</a>
+        <a id="ultimo" href="#">Twitter</a>
         <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
-    </ul>
+    </nav>
 </footer>
 
 <script src="assets/js/main.js"></script>
