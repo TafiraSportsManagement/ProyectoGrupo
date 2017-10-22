@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name=”keywords” content=”HTML5,CSS3,Javascript”>
     <title>Tienda de deportes</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Normaliza todos los navegadores-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/prueba.css">
 </head>
 
 <body id="main-container">
 
-<header id="header">
-    <div id="logo">
+<header>
+    <div class="logo">
         <!-- TODO: aqui debería ir el logo de la tienda si lo tuviera -->
-        <img src="assets/imagenes/logo.png" />
+        <i class="glyphicon glyphicon-grain" style="font-size:60px"; color="grey"></i>
     </div>
 
-    <h1 id="titulo">Tienda de deportes</h1>
-
-    <div id="login">
-        <img src="assets/imagenes/iconUser.png"/>
-        <br/>
-        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-        <a id="inicio" href="javascript:void(0);" >Inicio</a>&nbsp|&nbsp
-        <a id="registro" href="javascript:void(0);" >Registro</a>
+    <div class="titulo">
+        <h1>Tienda de deportes </h1>
+    </div>
+    <div class="login">
+        <div class="user-icon">
+             <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+        </div>
+            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+            <a id="inicio" href="javascript:void(0);" >Inicio</a>
+            <a id="registro" href="javascript:void(0);" >Registro</a>
+        <div class="carrito-icon">
+            <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+            <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
+        </div>
     </div>
     <div id="logout">
         <img src="assets/imagenes/iconUser.png"/>
@@ -31,28 +39,20 @@
         <a id="salir" href="javascript:void(0);" >Log out</a>
     </div>
 
+</header>
+
+<nav class="topnav">
+        <a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a>
+        <a id="navMarcas" href="javascript:void(0)" class="">Marcas</a><
+        <a id="navHombre" href="javascript:void(0)" class="">Hombre</a>
+        <a id="navMujer" href="javascript:void(0)" class="">Mujer</a>
+        <a id="navNiños" href="javascript:void(0)" class="">Niños</a>
+        <a id="navNovedades" href="javascript:void(0)" class="">Novedades</a>
+
     <div id="busqueda">
         <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
     </div>
-
-    <div id="carrito">
-        <img src="assets/imagenes/carrito.png"/>
-        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
-    </div>
-    <hr>
-
-</header>
-
-<nav id="navegacion_principal">
-    <ul>
-        <li><a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a></li>
-        <li><a id="navMarcas" href="javascript:void(0)" class="">Marcas</a></li>
-        <li><a id="navHombre" href="javascript:void(0)" class="">Hombre</a></li>
-        <li><a id="navMujer" href="javascript:void(0)" class="">Mujer</a></li>
-        <li><a id="navNiños" href="javascript:void(0)" class="">Niños</a></li>
-        <li><a id="navNovedades" href="javascript:void(0)" class="">Novedades</a></li>
-    </ul>
 </nav>
 
 <section id="seccionLogin">

@@ -27,6 +27,18 @@
     background-color: black;
     color:#ddd;
 }
+    /*---ICONOS----*/
+.user-icon{
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.carrito-icon{
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 /*-----BARRA DE NAVEGADOR------*/
 .topnav {
