@@ -1,5 +1,6 @@
 
 var seccionLogin = document.getElementById("seccionLogin");
+var seccionRegistro = document.getElementById("seccionRegistro");
 var seccionContenedores = document.getElementById("seccionContenedores");
 var seccionSeleccion = document.getElementById('seccionSeleccion');
 var registrarUsuario = document.getElementById('registrarUsuario');
@@ -34,7 +35,21 @@ function mostrarFormularioLogin(event) {
 }
 
 inicio.addEventListener('click', mostrarFormularioLogin, false);
-registro.addEventListener('click', mostrarFormularioLogin, false);
+
+function mostrarFormularioRegistro(event) {
+    seccionLogin.style.display = "block";
+
+    var elementoFuente = event.target || event.srcElement;
+    if ( elementoFuente.id == registro.id )
+        registrarUsuario.style.display = "block";
+    else
+        registrarUsuario.style.display = "none";
+
+    seccionContenedores.style.display = "none";
+    seccionSeleccion.style.display = "none";
+}
+
+registro.addEventListener('click', mostrarFormularioRegistro, false);
 
 
 function mostrarFormularioSeleccion() {

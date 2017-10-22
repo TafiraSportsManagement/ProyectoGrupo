@@ -86,6 +86,29 @@
     </fieldset>
 </section>
 
+<section id="seccionRegistro" class="seccionRegistro">
+    <fieldset>
+        <legend>Registro</legend>
+        <form id="formRegistro">
+            <label for="usuario">Usuario</label>
+            <input id="usuario" type="text" placeholder="usuario" required />
+            <br/>
+            <label for="contraseña">Contraseña</label>
+            <input id="contraseña" type="password" placeholder="contraseña" required />
+            <br/>
+            <div id="registrarUsuario">
+                <label for="repContraseña">Repetir contraseña</label>
+                <input id="repContraseña" type="password" placeholder="repetir contraseña" required />
+                <br/>
+
+                <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
+            </div>
+
+            <input type="submit" name="submit" value="Aceptar" />
+        </form>
+    </fieldset>
+</section>
+
 <nav id="navegacion_secundaria">
     <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
 
