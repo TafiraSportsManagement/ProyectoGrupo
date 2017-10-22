@@ -34,6 +34,11 @@
     margin-left: 20px;
 }
 
+#logout{
+    float: right;
+    display: none;
+}
+
 .carrito-icon{
     float: right;
     margin-right: 20px;
@@ -112,6 +117,20 @@
     background-color: #ddd;
     color: black;
 }
+
+/*  */
+
+#seccionLogin{
+    /*FORMULARIO DEL SUBMIT*/
+    /*float: right;*/
+    display: none;
+}
+
+#seccionSeleccion{
+    display: none;
+}
+
+/*  */
 
 /*----ETIQUITAS GLOBALES (TAGS)-----*/
 
