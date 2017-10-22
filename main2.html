@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/prueba.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
 
 <body id="main-container">
@@ -15,23 +16,27 @@
 <header>
     <div class="logo">
         <!-- TODO: aqui debería ir el logo de la tienda si lo tuviera -->
-        <i class="glyphicon glyphicon-grain" style="font-size:60px"; color="grey"></i>
+        <i class="glyphicon glyphicon-grain" style="font-size:60px;" ></i>
     </div>
 
     <div class="titulo">
         <h1>Tienda de deportes </h1>
     </div>
-    <div class="login">
+
+    <div class="carrito-icon">
+        <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
+    </div>
+
+    <div id="login" class="login">
         <div class="user-icon">
              <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
         </div>
             <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-            <a id="inicio" href="javascript:void(0);">Inicio</a>
-            <a id="registro" href="javascript:void(0);">Registro</a>
-        <div class="carrito-icon">
-            <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
-            <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
-        </div>
+
+        <a id="inicio" href="javascript:void(0);">Inicio</a>
+        <a id="registro" href="javascript:void(0);">Registro</a>
+
     </div>
     <div id="logout">
         <img src="assets/imagenes/iconUser.png"/>
@@ -54,7 +59,7 @@
     </div>
 </nav>
 
-<section class="seccionLogin">
+<section id="seccionLogin" class="seccionLogin">
     <fieldset>
         <legend>Login</legend>
         <form id="formLogin">
