@@ -16,7 +16,10 @@
     /*CONTENEDOR DEL LOGIN*/
     float: right;
 }
-
+#logout{
+    float: right;
+    display: none;
+}
 
 #seccionLogin{
     /*FORMULARIO DEL SUBMIT*/

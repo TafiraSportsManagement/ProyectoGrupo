@@ -33,6 +33,11 @@
             <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
         </div>
     </div>
+    <div id="logout">
+        <img src="assets/imagenes/iconUser.png"/>
+        <br/>
+        <a id="salir" href="javascript:void(0);" >Log out</a>
+    </div>
 
 </header>
 
@@ -54,21 +59,21 @@
         <legend>Login</legend>
         <form id="formLogin">
             <label for="usuario">Usuario</label>
-            <input id="usuario" type="text" placeholder="usuario"/>
+            <input id="usuario" type="text" placeholder="usuario" required />
             <br/>
             <label for="contraseña">Contraseña</label>
-            <input id="contraseña" type="password" placeholder="contraseña" />
+            <input id="contraseña" type="password" placeholder="contraseña" required />
 
             <br/>
             <div id="registrarUsuario">
                 <label for="repContraseña">Repetir contraseña</label>
-                <input id="repContraseña" type="password" placeholder="contraseña" />
+                <input id="repContraseña" type="password" placeholder="repetir contraseña" required />
                 <br/>
 
                 <!-- TODO: en el caso de registro se debe redirigir a otra página donde el usuario introducira algún dato adicional -->
             </div>
 
-            <input id="submitFormLogin" type="submit" value="Aceptar" />
+            <button id="submitFormLogin" type="button">Aceptar</button>
         </form>
     </fieldset>
 </section>
