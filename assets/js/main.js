@@ -7,7 +7,7 @@ var registrarUsuario = document.getElementById('registrarUsuario');
 var inicio = document.getElementById('inicio');
 var registro = document.getElementById('registro');
 var salir = document.getElementById('salir');
-var login = document.getElementById('login')
+var login = document.getElementById('login');
 var logout = document.getElementById('logout');
 
 var navDeportes = document.getElementById('navDeportes');
