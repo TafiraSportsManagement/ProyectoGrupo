@@ -101,12 +101,13 @@
     margin-left: 25%;
 
 }
+/*
 #primero{
-    margin-left: 12%;
+    margin-left: 1rem;
 }
 #ultimo{
-    margin-right: 7%;
-}
+    margin-right: 1rem;
+}*/
 
 .botnav a {
     float: left;
@@ -115,8 +116,11 @@
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+
+
 }
 .botnav a:hover {
     background-color: #ddd;
