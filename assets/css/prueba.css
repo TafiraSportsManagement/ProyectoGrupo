@@ -83,6 +83,9 @@
 .column.middle{
     width: 45%;
 }
+.row{
+    margin-left: 6%;
+}
 .row:after {
     content: "";
     display: table;
