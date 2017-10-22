@@ -21,37 +21,33 @@
     <div class="titulo">
         <h1>Tienda de deportes </h1>
     </div>
-    <div class="user-icon">
-        <img src="assets/imagenes/iconUser.png"/>
-    </div>
     <div class="login">
-        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
-        <a id="inicio" href="javascript:void(0);" >Inicio</a>&nbsp|&nbsp
-        <a id="registro" href="javascript:void(0);" >Registro</a>
+        <div class="user-icon">
+             <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+        </div>
+            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+            <a id="inicio" href="javascript:void(0);" >Inicio</a>
+            <a id="registro" href="javascript:void(0);" >Registro</a>
+        <div class="carrito-icon">
+            <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+            <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
+        </div>
     </div>
+
+</header>
+
+<nav class="topnav">
+        <a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a>
+        <a id="navMarcas" href="javascript:void(0)" class="">Marcas</a><
+        <a id="navHombre" href="javascript:void(0)" class="">Hombre</a>
+        <a id="navMujer" href="javascript:void(0)" class="">Mujer</a>
+        <a id="navNiños" href="javascript:void(0)" class="">Niños</a>
+        <a id="navNovedades" href="javascript:void(0)" class="">Novedades</a>
 
     <div id="busqueda">
         <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
     </div>
-
-    <div id="carrito">
-        <img src="assets/imagenes/carrito.png"/>
-        <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
-    </div>
-    <hr>
-
-</header>
-
-<nav id="navegacion_principal">
-    <ul>
-        <li><a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a></li>
-        <li><a id="navMarcas" href="javascript:void(0)" class="">Marcas</a></li>
-        <li><a id="navHombre" href="javascript:void(0)" class="">Hombre</a></li>
-        <li><a id="navMujer" href="javascript:void(0)" class="">Mujer</a></li>
-        <li><a id="navNiños" href="javascript:void(0)" class="">Niños</a></li>
-        <li><a id="navNovedades" href="javascript:void(0)" class="">Novedades</a></li>
-    </ul>
 </nav>
 
 <section id="seccionLogin">

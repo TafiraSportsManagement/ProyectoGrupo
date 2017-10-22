@@ -27,13 +27,17 @@
     background-color: black;
     color:#ddd;
 }
-
-.logo{
-
+    /*---ICONOS----*/
+.user-icon{
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-.user-icon{
-
+.carrito-icon{
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 /*-----BARRA DE NAVEGADOR------*/
