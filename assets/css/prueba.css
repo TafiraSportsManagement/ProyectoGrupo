@@ -9,6 +9,11 @@
     padding: 10px;
     text-align: center;
 }
+.logo{
+    float: left;
+    margin-left: 320px;
+    margin-top: 16px;
+}
     /*--Login--*/
 .login{
     overflow: hidden;
