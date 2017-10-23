@@ -84,6 +84,7 @@
     width: 45%;
 }
 .row{
+    margin-top: 2%;
     margin-left: 6%;
 }
 .row:after {
