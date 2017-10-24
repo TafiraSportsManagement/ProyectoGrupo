@@ -46,21 +46,6 @@ function mostrarFormularioRegistro(event) {
 registro.addEventListener('click', mostrarFormularioRegistro, false);
 
 
-// function mostrarFormularioSeleccion() {
-//     seccionLogin.style.display = "none";
-//     seccionRegistro.style.display = "none";
-//     seccionContenedores.style.display = "none";
-//     seccionSeleccion.style.display = "block";
-// }
-//
-// navDeportes.addEventListener('click', mostrarFormularioSeleccion, false);
-// navMarcas.addEventListener('click', mostrarFormularioSeleccion, false);
-// navHombre.addEventListener('click', mostrarFormularioSeleccion, false);
-// navMujer.addEventListener('click', mostrarFormularioSeleccion, false);
-// navNinos.addEventListener('click', mostrarFormularioSeleccion, false);
-// navNovedades.addEventListener('click', mostrarFormularioSeleccion, false);
-
-
 function validarFormularioLoginRegistro(event) {
 
     <!-- console.log("registrarUsuario.style.display: " + registrarUsuario.style.display); -->
