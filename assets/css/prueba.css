@@ -139,11 +139,11 @@
     display: none;
 }
 
-/*#seccionRegistro{*/
-    /*!*FORMULARIO DEL SUBMIT*!*/
-    /*!*float: right;*!*/
-    /*display: none;*/
-/*}*/
+#seccionRegistro{
+    /*FORMULARIO DEL SUBMIT*/
+    /*float: right;*/
+    display: none;
+}
 
 #seccionSeleccion{
     display: none;

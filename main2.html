@@ -36,8 +36,8 @@
         </div>
             <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
 
-        <a id="inicio" href="javascript:void(0);">Login</a>
-        <a id="registro" href="register.html">Registro</a>
+        <a id="log">Login</a>
+        <a id="registro">Registro</a>
 
     </div>
 
@@ -50,12 +50,12 @@
 </header>
 
 <nav class="topnav">
-        <a id="navDeportes"  href="javascript:void(0)" class="">Deportes</a>
-        <a id="navMarcas" href="javascript:void(0)" class="">Marcas</a><
-        <a id="navHombre" href="javascript:void(0)" class="">Hombre</a>
-        <a id="navMujer" href="javascript:void(0)" class="">Mujer</a>
-        <a id="navNiños" href="javascript:void(0)" class="">Niños</a>
-        <a id="navNovedades" href="javascript:void(0)" class="">Novedades</a>
+        <a id="navDeportes" class="">Deportes</a>
+        <a id="navMarcas" class="">Marcas</a><
+        <a id="navHombre" class="">Hombre</a>
+        <a id="navMujer" class="">Mujer</a>
+        <a id="navNiños" class="">Niños</a>
+        <a id="navNovedades" class="">Novedades</a>
         <div class="busqueda">
         <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
@@ -77,56 +77,56 @@
     </fieldset>
 </section>
 
-<!--<section id="seccionRegistro" class="seccionRegistro">-->
-    <!--<fieldset>-->
-        <!--<legend>Registro</legend>-->
-        <!--<form id="formRegistro">-->
-            <!--<label for="usuario">Usuario</label>-->
-            <!--<input id="usuario" type="text" placeholder="usuario" required />-->
-            <!--<br/>-->
-            <!--<label for="contraseña">Contraseña</label>-->
-            <!--<input id="contraseña" type="password" placeholder="contraseña" required />-->
-            <!--<br/>-->
-            <!--<div id="registrarUsuario">-->
-                <!--<label for="repContraseña">Repetir contraseña</label>-->
-                <!--<input id="repContraseña" type="password" placeholder="repetir contraseña" required />-->
-            <!--</div>-->
-            <!--<br/>-->
-            <!--<label for="nombre">Nombre</label>-->
-            <!--<input id="nombre" type="text" placeholder="nombre" required />-->
-            <!--<br/>-->
-            <!--<label for="apellidos">Apellidos</label>-->
-            <!--<input id="apellidos" type="text" placeholder="apellidos" required />-->
-            <!--<br/>-->
-            <!--<label for="teléfono">Teléfono</label>-->
-            <!--<input id="teléfono" type="text" placeholder="teléfono" required />-->
-            <!--<br/>-->
-            <!--<label for="dirección">Dirección</label>-->
-            <!--<input id="dirección" type="text" placeholder="dirección" required />-->
-            <!--<br/>-->
-            <!--<label for="país">País</label>-->
-            <!--<select id ="país" name="país">-->
-                <!--<option selected="" value="Default">Selecciona un país</option>-->
-                <!--<option value="ES">España</option>-->
-                <!--<option value="AL">Canada</option>-->
-                <!--<option value="DZ">India</option>-->
-                <!--<option value="AS">Russia</option>-->
-                <!--<option value="AD">USA</option>-->
-            <!--</select>-->
-            <!--<br/>-->
-            <!--<label for="códigoPostal">Código Postal</label>-->
-            <!--<input id="códigoPostal" type="text" placeholder="código postal" required />-->
-            <!--<br/>-->
-            <!--<label for="email">Email</label>-->
-            <!--<input id="email" type="text" placeholder="email" required />-->
-            <!--<br/>-->
-            <!--<br/>-->
+<section id="seccionRegistro" class="seccionRegistro">
+    <fieldset>
+        <legend>Registro</legend>
+        <form id="formRegistro">
+            <label for="usuario">Usuario</label>
+            <input id="usuario" type="text" placeholder="usuario" required />
+            <br/>
+            <label for="contraseña">Contraseña</label>
+            <input id="contraseña" type="password" placeholder="contraseña" required />
+            <br/>
+            <div id="registrarUsuario">
+                <label for="repContraseña">Repetir contraseña</label>
+                <input id="repContraseña" type="password" placeholder="repetir contraseña" required />
+            </div>
+            <br/>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="nombre" required />
+            <br/>
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" type="text" placeholder="apellidos" required />
+            <br/>
+            <label for="teléfono">Teléfono</label>
+            <input id="teléfono" type="text" placeholder="teléfono" required />
+            <br/>
+            <label for="dirección">Dirección</label>
+            <input id="dirección" type="text" placeholder="dirección" required />
+            <br/>
+            <label for="país">País</label>
+            <select id ="país" name="país">
+                <option selected="" value="Default">Selecciona un país</option>
+                <option value="ES">España</option>
+                <option value="AL">Canada</option>
+                <option value="DZ">India</option>
+                <option value="AS">Russia</option>
+                <option value="AD">USA</option>
+            </select>
+            <br/>
+            <label for="códigoPostal">Código Postal</label>
+            <input id="códigoPostal" type="text" placeholder="código postal" required />
+            <br/>
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="email" required />
+            <br/>
+            <br/>
 
 
-            <!--<input type="submit" name="submit" value="Aceptar" />-->
-        <!--</form>-->
-    <!--</fieldset>-->
-<!--</section>-->
+            <input type="submit" name="submit" value="Aceptar" />
+        </form>
+    </fieldset>
+</section>
 <nav id="navegacion_secundaria">
     <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
 
@@ -245,8 +245,7 @@
         <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
     </nav>
 </footer>
-
-<script src="assets/js/main.js"></script>
-
+<script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
+<script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
 </body>
 </html>
