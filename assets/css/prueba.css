@@ -104,9 +104,9 @@
     z-index: 4;
 }
 
-.dropdown-content { /*He quitado el background y el padding para que se vea mejor, se puede cambiar*/
-    /*background: #333;*/
-    padding: 0px;
+.dropdown-content { /*Esto hace que se vea una fina línea recuadrando el menú que se despliega*/
+    background: #333;
+    padding: 1px;
     color: white;
 }
 
