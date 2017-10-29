@@ -247,7 +247,7 @@ header {
 
 }
 
-footer {
+footer .colum.middle:after .colum.side:after{
     background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
