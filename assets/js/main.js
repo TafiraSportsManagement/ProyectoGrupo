@@ -22,7 +22,6 @@ function mostrarFormularioLogin(event) {
         registrarUsuario.style.display = "block";
     else
         registrarUsuario.style.display = "none";
-
     seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
     seccionSeleccion.style.display = "none";
