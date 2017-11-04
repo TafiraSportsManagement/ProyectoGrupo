@@ -30,20 +30,20 @@ function mostrarFormularioLogin(event) {
 
 log.addEventListener('click', mostrarFormularioLogin, false);
 
-function mostrarFormularioRegistro(event) {
-    seccionRegistro.style.display = "block";
-
-    var elementoFuente1 = event.target || event.srcElement;
-    if ( elementoFuente1.id == registro.id )
-        registrarUsuario.style.display = "block";
-    else
-        registrarUsuario.style.display = "none";
-    seccionLogin.style.display = "none";
-    seccionContenedores.style.display = "none";
-    seccionSeleccion.style.display = "none";
-}
-
-registro.addEventListener('click', mostrarFormularioRegistro, false);
+// function mostrarFormularioRegistro(event) {
+//     seccionRegistro.style.display = "block";
+//
+//     var elementoFuente1 = event.target || event.srcElement;
+//     if ( elementoFuente1.id == registro.id )
+//         registrarUsuario.style.display = "block";
+//     else
+//         registrarUsuario.style.display = "none";
+//     seccionLogin.style.display = "none";
+//     seccionContenedores.style.display = "none";
+//     seccionSeleccion.style.display = "none";
+// }
+//
+// registro.addEventListener('click', mostrarFormularioRegistro, false);
 
 
 function validarFormularioLoginRegistro(event) {
