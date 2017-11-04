@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
 </head>
 
@@ -34,7 +35,7 @@
         </div>
             <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
 
-        <a id="log">Login</a>
+        <a id="log" onclick="document.getElementById('modalLogin').style.display='block'" style="width:auto;">Login</a>
         <a id="registro" href="register.html">Registro</a>
 
     </div>
@@ -169,20 +170,31 @@
         </div>
 </nav>
 
-<section id="seccionLogin" class="seccionLogin">
-    <fieldset>
-        <legend>Login</legend>
-        <form id="formLogin">
+<div id="modalLogin" class="modal">
+<!--<section id="seccionLogin" class="seccionLogin">-->
+    <!--<fieldset>-->
+
+        <form class="formLoginModal">
+            <legend>Login</legend>
+            <div class="container">
             <label for="usuarioLogin">Usuario</label>
             <input id="usuarioLogin" type="text" placeholder="usuario" required />
             <br/>
             <label for="contraseñaLogin">Contraseña</label>
             <input id="contraseñaLogin" type="password" placeholder="contraseña" required />
             <br/>
-            <input type="submit" name="submit" value="Aceptar" />
+            <button type="submit" name="submit" value="Login" />
+            <input type="checkbox" checked="checked"/> Remember me
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+
         </form>
-    </fieldset>
-</section>
+    <!--</fieldset>-->
+<!--</section>-->
+</div>
 
 <!--<section id="seccionRegistro" class="seccionRegistro">-->
     <!--<fieldset>-->
