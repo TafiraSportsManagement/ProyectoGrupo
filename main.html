@@ -46,6 +46,25 @@
         <a id="salir">Log out</a>
     </div>
 
+    <div id="modalLogin" class="modal">
+        <form class="formLoginModal">
+            <div class="container">
+                <label for="usuarioLogin">Usuario</label>
+                <input id="usuarioLogin" type="text" placeholder="usuario" required />
+                <br/>
+                <label for="contraseñaLogin">Contraseña</label>
+                <input id="contraseñaLogin" type="password" placeholder="contraseña" required />
+                <br/>
+                <button type="submit">Login</button>
+                <input type="checkbox" checked="checked"/> Remember me
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
 </header>
 
 <nav class="topnav">
@@ -169,27 +188,6 @@
         <input type="search" placeholder="Buscar en ..." />
         </div>
 </nav>
-
-<div id="modalLogin" class="modal">
-        <form class="formLoginModal">
-            <legend>Login</legend>
-            <div class="container">
-            <label for="usuarioLogin">Usuario</label>
-            <input id="usuarioLogin" type="text" placeholder="usuario" required />
-            <br/>
-            <label for="contraseñaLogin">Contraseña</label>
-            <input id="contraseñaLogin" type="password" placeholder="contraseña" required />
-            <br/>
-            <button type="submit">Login</button>
-            <input type="checkbox" checked="checked"/> Remember me
-            </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-</div>
-
 <!--<section id="seccionRegistro" class="seccionRegistro">-->
     <!--<fieldset>-->
         <!--<legend>Registro</legend>-->

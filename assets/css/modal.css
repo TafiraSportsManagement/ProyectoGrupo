@@ -6,6 +6,7 @@
 }
 .container {
     padding: 16px;
+    width:inherit;
 }
 
 span.psw {
@@ -23,17 +24,17 @@ span.psw {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    /*background-color: rgb(0,0,0); /* Fallback color */
+    /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 }
 
 /* Modal Content/Box */
 .formLoginModal {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 5.3% auto 15% 70%; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: auto; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -56,7 +57,7 @@ span.psw {
 @media screen and (max-width: 300px) {
     span.psw {
         display: block;
-        float: none;
+        float: left;
     }
     .cancelbtn {
         width: 100%;
