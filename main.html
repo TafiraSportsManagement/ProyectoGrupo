@@ -25,29 +25,33 @@
         <h1> Tienda de deportes </h1>
     </div>
 
-    <div id="login" class="login">
-        <div class="user-icon">
-                <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
-        </div>
+    <div class="login">
+
         <div class="carrito-icon">
             <i class="glyphicon glyphicon-shopping-cart" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
             <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
         </div>
-            <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
 
-        <a id="log" onclick="document.getElementById('modalLogin').style.display='block'" style="width:auto;">Login</a>
-        <a id="registro" href="register.html">Registro</a>
+        <div class="user-icon">
+            <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
+        </div>
+
+        <!-- TODO: quizas sería mejor implementar los dos siguientes elementos como botones (luego un desplegable)-->
+
+        <div id="login">
+            <a id="log" style="width:auto;">Login</a>
+            <a id="registro" href="register.html">Registro</a>
+        </div>
+
+        <div id="logout">
+            <a id="salir" style="width:auto;">Log out</a>
+        </div>
 
     </div>
 
-    <div id="logout">
-        <i class="glyphicon glyphicon-user" style="font-size:40px;color:black;text-shadow:2px 2px 4px #000000;"></i>
-        <br/>
-        <a id="salir">Log out</a>
-    </div>
 
     <div id="modalLogin" class="modal">
-        <form class="formLoginModal">
+        <form id="formLoginModal" class="formLoginModal">
             <div class="container">
                 <label for="usuarioLogin">Usuario</label>
                 <input id="usuarioLogin" type="text" placeholder="usuario" required />
@@ -55,11 +59,11 @@
                 <label for="contraseñaLogin">Contraseña</label>
                 <input id="contraseñaLogin" type="password" placeholder="contraseña" required />
                 <br/>
-                <button type="submit">Login</button>
+                <button id="btnLogin" type="submit">Login</button>
                 <input type="checkbox" checked="checked"/> Remember me
             </div>
             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('modalLogin').style.display='none'" class="cancelbtn">Cancel</button>
+                <button id="btnCancelarLogin" type="button" class="cancelbtn">Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
@@ -267,8 +271,10 @@
 
     <article class="column side" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
+            <!--
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
+            -->
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3><output id="tituloVideo" content=""></output></h3>
@@ -357,10 +363,12 @@
         <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
     </nav>
 
+    <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
+
     <script src="assets/js/jquery-2.0.3.min.js"></script>
     <script src="assets/js/jquery.raptorize.2.0.js"></script>
     <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
-    <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
+
     <script src="assets/js/modalLogin.js" language="JavaScript" type="text/javascript"></script>
 </footer>
 </body>

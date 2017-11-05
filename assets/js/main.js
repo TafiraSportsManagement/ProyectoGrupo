@@ -6,28 +6,64 @@ var seccionContenedores = document.getElementById("seccionContenedores");
 var registrarUsuario = document.getElementById('registrarUsuario');
 
 var log = document.getElementById('log');
+var login = document.getElementById('login');
+var modalLogin = document.getElementById('modalLogin');
+var cancelarLogin = document.getElementById('btnCancelarLogin');
 var registro = document.getElementById('registro');
 var salir = document.getElementById('salir');
-var login = document.getElementById('login');
 var logout = document.getElementById('logout');
 
-var botonLoginRegistro = document.getElementById('submitFormLogin');
+var formLogin = document.getElementById('formLoginModal');
+var btnLogin = document.getElementById('btnLogin');
+
+//var botonLoginRegistro = document.getElementById('submitFormLogin');
 
 
 function mostrarFormularioLogin(event) {
-    seccionLogin.style.display = "block";
+    console.log("mostrarFormularioLogin");
 
+    modalLogin.style.display = "block";
+
+
+    /* */
+    //seccionLogin.style.display = "block";
+
+    /*
     var elementoFuente = event.target || event.srcElement;
     if ( elementoFuente.id == registro.id )
         registrarUsuario.style.display = "block";
     else
         registrarUsuario.style.display = "none";
-    seccionRegistro.style.display = "none";
+    */
+
+//    seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
     seccionSeleccion.style.display = "none";
 }
 
 log.addEventListener('click', mostrarFormularioLogin, false);
+
+/*
+function procesarLogOut(event) {
+
+    console.log("procesarLogOut");
+
+    if ( event.submit ) {
+        login.style.display = "none";
+        logout.style.display = "block";
+    } else {
+        if ( event.onclick ) {
+            logout.style.display = "none";
+            login.style.display = "block";
+        }
+    }
+
+}
+
+formLogin.addEventListener('submit', procesarLogOut, false);
+//btnLogin.addEventListener('click', procesarLogOut, false);
+salir.addEventListener('click', procesarLogOut, false);
+*/
 
 function validarFormularioLoginRegistro(event) {
 
@@ -47,9 +83,10 @@ function validarFormularioLoginRegistro(event) {
     restablecerContenido();
 }
 
-botonLoginRegistro.addEventListener('click', validarFormularioLoginRegistro, false);
+//botonLoginRegistro.addEventListener('click', validarFormularioLoginRegistro, false);
 
 
+/*
 function logOut(event) {
 
     var elementoFuente = event.target || event.srcElement;
@@ -68,7 +105,7 @@ function logOut(event) {
 }
 
 salir.addEventListener('click', logOut, false);
-
+*/
 
 function restablecerContenido() {
     seccionLogin.style.display = "none";

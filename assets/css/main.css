@@ -18,6 +18,7 @@
     overflow: hidden;
     background-color: #f1f1f1;
 }
+
 .login a{
     display: block;
     /*align: right; */
@@ -27,20 +28,23 @@
     color: black;
     text-decoration: none;
 }
+
 .login a:hover{
     background-color: black;
     color:#ddd;
-}
-    /*---ICONOS----*/
-.user-icon{
-    float: right;
-    margin-right: 20px;
-    margin-left: 20px;
 }
 
 #logout{
     float: right;
     display: none;
+}
+
+    /*---ICONOS----*/
+
+.user-icon{
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .carrito-icon{
