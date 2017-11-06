@@ -37,8 +37,8 @@ function mostrarFormularioLogin(event) {
     */
 
 //    seccionRegistro.style.display = "none";
-    seccionContenedores.style.display = "none";
-    seccionSeleccion.style.display = "none";
+//     seccionContenedores.style.display = "none";
+//     seccionSeleccion.style.display = "none";
 }
 
 log.addEventListener('click', mostrarFormularioLogin, false);
