@@ -5,9 +5,7 @@ window.onclick = function(event) {
     if ( event.target == modalLogin ) {
         cancelarFormularioLogin(event);
         logout.style.display = "none";
-
     }
-    logout.style.display = "block";
 }
 
 function validarFormularioLogin(event) {
