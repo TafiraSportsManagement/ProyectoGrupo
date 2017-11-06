@@ -21,24 +21,7 @@ var btnLogin = document.getElementById('btnLogin');
 
 function mostrarFormularioLogin(event) {
     console.log("mostrarFormularioLogin");
-
     modalLogin.style.display = "block";
-
-
-    /* */
-    //seccionLogin.style.display = "block";
-
-    /*
-    var elementoFuente = event.target || event.srcElement;
-    if ( elementoFuente.id == registro.id )
-        registrarUsuario.style.display = "block";
-    else
-        registrarUsuario.style.display = "none";
-    */
-
-//    seccionRegistro.style.display = "none";
-//     seccionContenedores.style.display = "none";
-//     seccionSeleccion.style.display = "none";
 }
 
 log.addEventListener('click', mostrarFormularioLogin, false);
@@ -65,27 +48,6 @@ formLogin.addEventListener('submit', procesarLogOut, false);
 salir.addEventListener('click', procesarLogOut, false);
 */
 
-function validarFormularioLoginRegistro(event) {
-
-    <!-- console.log("registrarUsuario.style.display: " + registrarUsuario.style.display); -->
-
-    if ( registrarUsuario.style.display == "block" ) {
-
-        var contraseña = document.getElementById('contraseña');
-        var repContraseña = document.getElementById('repContraseña');
-        if ( contraseña.value != repContraseña.value ) {
-            window.alert('ERROR');
-            return;
-        }
-    }
-
-    logOut(event);
-    restablecerContenido();
-}
-
-//botonLoginRegistro.addEventListener('click', validarFormularioLoginRegistro, false);
-
-
 /*
 function logOut(event) {
 
@@ -111,4 +73,5 @@ function restablecerContenido() {
     seccionLogin.style.display = "none";
     seccionContenedores.style.display = "block";
     seccionSeleccion.style.display = "none";
+    logout.style.display = "block";
 }
