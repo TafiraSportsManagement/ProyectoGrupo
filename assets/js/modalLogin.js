@@ -4,6 +4,8 @@
 window.onclick = function(event) {
     if ( event.target == modalLogin ) {
         cancelarFormularioLogin(event);
+        logout.style.display = "none";
+
     }
     logout.style.display = "block";
 }
@@ -11,6 +13,7 @@ window.onclick = function(event) {
 function validarFormularioLogin(event) {
     log.style.display ="none";
     logout.style.display = "block";
+    modalLogin.style.display = "none";
 }
 
 btnLogin.addEventListener('click', validarFormularioLogin, false);
@@ -19,6 +22,7 @@ btnLogin.addEventListener('click', validarFormularioLogin, false);
 function cancelarFormularioLogin(event) {
     /* console.log("cancelarFormularioLogin"); */
     modalLogin.style.display = "none";
+    logout.style.display = "none";
 
 }
 cancelarLogin.addEventListener('click', cancelarFormularioLogin, false);

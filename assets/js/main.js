@@ -22,6 +22,7 @@ var btnLogin = document.getElementById('btnLogin');
 function mostrarFormularioLogin(event) {
     console.log("mostrarFormularioLogin");
     modalLogin.style.display = "block";
+    logout.style.display = "none";
 }
 
 log.addEventListener('click', mostrarFormularioLogin, false);
