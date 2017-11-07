@@ -10,15 +10,14 @@ var cp = document.getElementById("codigoPostal");
 var email = document.getElementById("email");
 
 function validatePass(){
-    error = [];
     if(contraseña.length < 8){
-        error.push("La contraseña debe tener al menos 8 caract.");
+        contraseña.setCustomValidity("La contraseña debe tener al menos 8 caract.");
+        return false;
     }if(contraseña.search(/[a-z]/i) < 0){
-        error.push("Tu contraseña debe tener al menos 1 letra.");
+        contraseña.setCustomValidity("Tu contraseña debe tener al menos 1 letra.");
+        return false;
     }if(contraseña.search(/[0-9]/) < 0){
-        error.push("Tu contraseña debe tener al menos 1 numero.");
-    }if(error.length > 0){
-        alert(error.join("\n"));
+        contraseña.setCustomValidity("Tu contraseña debe tener al menos 1 numero.");
         return false;
     }
     return true;
@@ -27,25 +26,34 @@ function validatePass(){
 function validateForm(){
     alerta = "Rellena este campo";
 
-    if(usuario.length == 0){
-        alert(alerta);
-    }if(contraseña.value != repContraseña.value){
-        alert("Contraseñas no coinciden");
-    }if(nombre.length == 0){
-        alert(alerta);
-    }if(apellidos.length == 0){
-        alert(alerta);
-    }if(tfn.length < 9 || tfn.search(/[0-9]/) < 9){
-        alert ("Introduzca un telefono valido");
-    }if(direccion == 0){
-        alert(alerta);
-    }if(pais.value == ""){
-        alert("Seleccione su pais");
-    }if(cp.length < 5 || cp.search(/[0-9]/) < 5){
-        alert("Introduzca un codigo postal valido");
-    }if(email.search(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/) < 1){
-        alert("Introduzca un email valido");
+    if(usuario.length == 0 || usuario.search(/[0-9]/) < 1){
+        usuario.setCustomValidity("Introduzca usuario valido");
+        return false;
     }if(validatePass()){
+        return false;
+    }if(contraseña.value != repContraseña.value){
+        repContraseña.setCustomValidity("Contraseñas no coinciden");
+        return false;
+    }if(nombre.length == 0){
+        nombre.setCustomValidity(alerta);
+        return false;
+    }if(apellidos.length == 0){
+        apellidos.setCustomValidity(alerta);
+        return false;
+    }if(tfn.length < 9 || tfn.search(/[0-9]/) < 9){
+        tfn.setCustomValidity("Introduzca un telefono valido");
+        return false;
+    }if(direccion == 0){
+        direccion.setCustomValidity(alerta);
+        return false;
+    }if(pais.value == ""){
+        pais.setCustomValidity("Seleccione su pais");
+        return false;
+    }if(cp.length < 5 || cp.search(/[0-9]/) < 5){
+        cp.setCustomValidity("Introduzca un codigo postal valido");
+        return false;
+    }if(email.search(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/) < 1){
+        email.setCustomValidity("Introduzca un email valido");
         return false;
     }
     return true;
