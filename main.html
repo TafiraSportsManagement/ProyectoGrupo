@@ -52,7 +52,7 @@
 
 
     <div id="modalLogin" class="modal">
-        <form id="formLoginModal" class="formLoginModal">
+        <form id="formLoginModal" class="formLoginModal" onsubmit="return checkFormLogin()">
             <div class="container">
                 <label for="usuarioLogin">Usuario</label>
                 <input id="usuarioLogin" type="text" placeholder="usuario" required />
@@ -60,11 +60,12 @@
                 <label for="contraseñaLogin">Contraseña</label>
                 <input id="contraseñaLogin" type="password" placeholder="contraseña" required/>
                 <br/>
-                <button id="btnLogin" type="button">Login</button>
+                <input type="submit" value="Login">
+                <!--<button id="btnLogin" onclick="check()">Login</button>-->
                 <input type="checkbox" checked="checked"/> Remember me
             </div>
             <div class="container" style="background-color:#f1f1f1">
-                <button id="btnCancelarLogin" type="button" class="cancelbtn">Cancel</button>
+                <button id="btnCancelarLogin" type="button" class="cancelbtn" onclick="cancelFormularioLogin()">Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
