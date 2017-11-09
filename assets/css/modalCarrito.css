@@ -37,3 +37,8 @@ span.psw {
         width: 100%;
     }
 }
+
+.carrito-icon:hover{
+    background-color: #ffffff;
+    color: #dd6e40;
+}
