@@ -23,7 +23,7 @@ function checkFormLogin(){
 
 window.onclick = function(event) {
     if ( event.target == modalLogin ) {
-        cancelarFormularioLogin();
+        cancelFormularioLogin();
         logout.style.display = "none";
     }
 }

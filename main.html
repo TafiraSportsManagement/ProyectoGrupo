@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/modalLogin.css">
+    <link rel="stylesheet" href="assets/css/modalCarrito.css">
     <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
 </head>
 
@@ -28,7 +29,7 @@
     <div class="login">
 
         <div class="carrito-icon">
-            <img src="assets/imagenes/001-cart.png" height="50" width="50"/>
+            <img id="carrito" src="assets/imagenes/001-cart.png" height="50" width="50" onclick="modalCarrito"/>
             <!-- TODO: aqui debería ir un elemento que permita reflejar el núm. de artículos adquiridos-->
         </div>
 
@@ -47,10 +48,7 @@
         <div id="logout">
             <a id="salir" style="width:auto;">Log out</a>
         </div>
-
-
     </div>
-
 
     <div id="modalLogin" class="modal">
         <form id="formLoginModal" class="formLoginModal">
@@ -72,126 +70,171 @@
         </form>
     </div>
 
+    <div id="modalCarrito" class="modal">
+        <form id="formCarritoModal" class="formCarritoModal">
+            <div class="container">
+                <!--TODO: todo esto debe venir del servidor, ya que son elementos escogidos en la pagina -->
+                <label id="usuarioConectado">Nombre Usuario Conectado</label>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th id="producto">Producto</th>
+                        <th id="descripcion">Descripcion</th>
+                        <th id="cantidad">Cantidad</th>
+                        <th id="precio">Precio</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Camiseta Montaña</td>
+                        <td>"Camiseta de especial uso para montaña, hombre, talla L"</td>
+                        <td>1</td>
+                        <td>10.95 €</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pantalón montaña</td>
+                        <td>"Pantalón de especial uso para montaña, hombre, talla 44"</td>
+                        <td>1</td>
+                        <td>18.95 €</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Cantimplora</td>
+                        <td>"Cantimplora aluminio termica, azul, 1.5 L"</td>
+                        <td>1</td>
+                        <td>6.95 €</td>
+                    </tr>
+                </table>
+                <label id="precioTotal"> TOTAL : 36.85</label>
+                <input type="button" value="Check" onclick="checkFormCarrito()">
+           </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button id="btnCancelarCheck" type="button" class="cancelbtn" onclick="cancelFormCarrito()">Cancel</button>
+                <span class="psw">¿Alguna duda con el <a href="#">pago?</a></span>
+            </div>
+       </form>
+   </div>
+
 </header>
 
 <nav class="topnav">
-    <div class="dropdown">
-        <button class="dropbtn">Deportes</button>
-        <div class="dropdown-content">
-            <div class="rowmenu">
-                <div class="columnamenu">
-                    <a href="#">Deportes 1</a>
-                    <a href="#">Deportes 2</a>
-                    <a href="#">Deportes 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Deportes 1</a>
-                    <a href="#">Deportes 2</a>
-                    <a href="#">Deportes 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Deportes 1</a>
-                    <a href="#">Deportes 2</a>
-                    <a href="#">Deportes 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="dropdown">
+       <button class="dropbtn">Deportes</button>
+       <div class="dropdown-content">
+           <div class="rowmenu">
+               <div class="columnamenu">
+                   <a href="#">Deportes 1</a>
+                   <a href="#">Deportes 2</a>
+                   <a href="#">Deportes 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Deportes 1</a>
+                   <a href="#">Deportes 2</a>
+                   <a href="#">Deportes 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Deportes 1</a>
+                   <a href="#">Deportes 2</a>
+                   <a href="#">Deportes 3</a>
+               </div>
+           </div>
+       </div>
+   </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Mujer</button>
-        <div class="dropdown-content">
-            <div class="rowmenu">
-                <div class="columnamenu">
-                    <a href="#">Mujer 1</a>
-                    <a href="#">Mujer 2</a>
-                    <a href="#">Mujer 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Mujer 1</a>
-                    <a href="#">Mujer 2</a>
-                    <a href="#">Mujer 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Mujer 1</a>
-                    <a href="#">Mujer 2</a>
-                    <a href="#">Mujer 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="dropdown">
+       <button class="dropbtn">Mujer</button>
+       <div class="dropdown-content">
+           <div class="rowmenu">
+               <div class="columnamenu">
+                   <a href="#">Mujer 1</a>
+                   <a href="#">Mujer 2</a>
+                   <a href="#">Mujer 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Mujer 1</a>
+                   <a href="#">Mujer 2</a>
+                   <a href="#">Mujer 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Mujer 1</a>
+                   <a href="#">Mujer 2</a>
+                   <a href="#">Mujer 3</a>
+               </div>
+           </div>
+       </div>
+   </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Niños</button>
-        <div class="dropdown-content">
-            <div class="rowmenu">
-                <div class="columnamenu">
-                    <a href="#">Niños 1</a>
-                    <a href="#">Niños 2</a>
-                    <a href="#">Niños 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Niños 1</a>
-                    <a href="#">Niños 2</a>
-                    <a href="#">Niños 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Niños 1</a>
-                    <a href="#">Niños 2</a>
-                    <a href="#">Niños 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="dropdown">
+       <button class="dropbtn">Niños</button>
+       <div class="dropdown-content">
+           <div class="rowmenu">
+               <div class="columnamenu">
+                   <a href="#">Niños 1</a>
+                   <a href="#">Niños 2</a>
+                   <a href="#">Niños 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Niños 1</a>
+                   <a href="#">Niños 2</a>
+                   <a href="#">Niños 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Niños 1</a>
+                   <a href="#">Niños 2</a>
+                   <a href="#">Niños 3</a>
+               </div>
+           </div>
+       </div>
+   </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Hombre</button>
-        <div class="dropdown-content">
-            <div class="rowmenu">
-                <div class="columnamenu">
-                    <a href="#">Hombre 1</a>
-                    <a href="#">Hombre 2</a>
-                    <a href="#">Hombre 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Hombre 1</a>
-                    <a href="#">Hombre 2</a>
-                    <a href="#">Hombre 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Hombre 1</a>
-                    <a href="#">Hombre 2</a>
-                    <a href="#">Hombre 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="dropdown">
+       <button class="dropbtn">Hombre</button>
+       <div class="dropdown-content">
+           <div class="rowmenu">
+               <div class="columnamenu">
+                   <a href="#">Hombre 1</a>
+                   <a href="#">Hombre 2</a>
+                   <a href="#">Hombre 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Hombre 1</a>
+                   <a href="#">Hombre 2</a>
+                   <a href="#">Hombre 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Hombre 1</a>
+                   <a href="#">Hombre 2</a>
+                   <a href="#">Hombre 3</a>
+               </div>
+           </div>
+       </div>
+   </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Ofertas</button>
-        <div class="dropdown-content">
-            <div class="rowmenu">
-                <div class="columnamenu">
-                    <a href="#">Ofertas 1</a>
-                    <a href="#">Ofertas 2</a>
-                    <a href="#">Ofertas 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Ofertas 1</a>
-                    <a href="#">Ofertas 2</a>
-                    <a href="#">Ofertas 3</a>
-                </div>
-                <div class="columnamenu">
-                    <a href="#">Ofertas 1</a>
-                    <a href="#">Ofertas 2</a>
-                    <a href="#">Ofertas 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="dropdown">
+       <button class="dropbtn">Ofertas</button>
+       <div class="dropdown-content">
+           <div class="rowmenu">
+               <div class="columnamenu">
+                   <a href="#">Ofertas 1</a>
+                   <a href="#">Ofertas 2</a>
+                   <a href="#">Ofertas 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Ofertas 1</a>
+                   <a href="#">Ofertas 2</a>
+                   <a href="#">Ofertas 3</a>
+               </div>
+               <div class="columnamenu">
+                   <a href="#">Ofertas 1</a>
+                   <a href="#">Ofertas 2</a>
+                   <a href="#">Ofertas 3</a>
+               </div>
+           </div>
+       </div>
+   </div>
 
-        <div class="busqueda">
-        <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
+       <div class="busqueda">
+       <!-- TODO: hay que enlazar esta búsqueda con funcion/método que la realice de manera efectiva -->
         <input type="search" placeholder="Buscar en ..." />
         </div>
 </nav>
@@ -323,6 +366,7 @@
     <!--<script src="assets/js/jquery.raptorize.2.0.js"></script>-->
     <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/modalLogin.js" language="JavaScript" type="text/javascript"></script>
+    <script src="assets/js/modalCarrito.js" language="JavaScript" type="text/javascript"></script>
 </footer>
 </body>
 </html>

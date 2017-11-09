@@ -17,7 +17,8 @@ var formLogin = document.getElementById('formLoginModal');
 var btnLogin = document.getElementById('btnLogin');
 
 //var botonLoginRegistro = document.getElementById('submitFormLogin');
-
+var carrito = document.getElementById('carrito')
+var modalCarrito = document.getElementById('modalCarrito');
 
 function mostrarFormularioLogin(event) {
     console.log("mostrarFormularioLogin");
@@ -27,6 +28,11 @@ function mostrarFormularioLogin(event) {
 
 log.addEventListener('click', mostrarFormularioLogin, false);
 
+function mostrarCarritoModal(){
+    console.log("mostrarCarritoModal");
+    modalCarrito.style.display = "block";
+}
+carrito.addEventListener('click', mostrarCarritoModal, false);
 /*
 function procesarLogOut(event) {
 
