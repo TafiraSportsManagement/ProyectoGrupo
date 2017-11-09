@@ -23,7 +23,7 @@ function checkFormLogin(){
 
 window.onclick = function(event) {
     if ( event.target == modalLogin ) {
-        cancelarFormularioLogin(event);
+        cancelarFormularioLogin();
         logout.style.display = "none";
     }
 }
@@ -34,11 +34,11 @@ function onValidarFormularioLogin(event) {
     modalLogin.style.display = "none";
 }
 
-btnLogin.addEventListener('click', validarFormularioLogin, false);
+btnLogin.addEventListener('click', onvalidarFormularioLogin, false);
 
 
 
-function cancelFormularioLogin(event) {
+function cancelFormularioLogin() {
     /* console.log("cancelarFormularioLogin"); */
     modalLogin.style.display = "none";
     logout.style.display = "none";
