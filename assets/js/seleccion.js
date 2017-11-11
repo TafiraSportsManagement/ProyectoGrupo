@@ -15,7 +15,7 @@ function mostrarFormularioSeleccion() {
     seccionSeleccion.style.display = "block";
 }
 
-navDeportes.addEventListener('click', mostrarFormularioSeleccion, false);
+//navDeportes.addEventListener('click', mostrarFormularioSeleccion, false);
 //navMarcas.addEventListener('click', mostrarFormularioSeleccion, false);
 //navHombre.addEventListener('click', mostrarFormularioSeleccion, false);
 //navMujer.addEventListener('click', mostrarFormularioSeleccion, false);

@@ -2,6 +2,7 @@
 var btnCancelLogin = document.getElementById("btnCancelarLogin");
 var userLogin = document.forms["formLoginModal"]["usuarioLogin"];
 var userPass = document.forms["formLoginModal"]["contraseñaLogin"];
+
 function checkFormLogin(){
     /*function to check userid & password*/
 
@@ -34,7 +35,7 @@ function onValidarFormularioLogin(event) {
     modalLogin.style.display = "none";
 }
 
-btnLogin.addEventListener('click', onvalidarFormularioLogin, false);
+btnLogin.addEventListener('click', onValidarFormularioLogin, false);
 
 
 
