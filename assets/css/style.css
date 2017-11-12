@@ -15,7 +15,6 @@ body {
 	font: 100%/1 'Roboto', serif;
 	background: #fafafa;
 	color: #333;
-	border-top: 0.5em solid #cc8500;	
 }
 
 :active, :focus {
