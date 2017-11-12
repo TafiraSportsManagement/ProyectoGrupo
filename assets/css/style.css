@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding-left: 85px;
 	min-height: 82px;
 	line-height: 2.3;
-	background: url(../images/logo.png) no-repeat 0 50%;
+	background: url(../imagenes/logo.png) no-repeat 0 50%;
 	color: #900;
 	
 }
@@ -193,7 +193,7 @@ body#checkout-page #site-info {
 
 .shopping-cart tr:nth-child(even) {
 	background: #fafafa;
-},
+}
 
 .shopping-cart td.pdelete {
 	text-align: center;
