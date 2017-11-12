@@ -3,7 +3,7 @@ var btnCancelCheck = document.getElementById('btnCancelarCheck');
 
 function checkFormCarrito(){
  /*Funcion que hara checout de los elementos de la compra*/
- alert("¡¡COMPRA REALIZADA CON EXITO!!");
+ alert("Producto añadido al carrito");
  onValidarFormularioCarrito();
 }
 

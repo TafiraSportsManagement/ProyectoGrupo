@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/modalLogin.css">
     <link rel="stylesheet" href="assets/css/modalCarrito.css">
+
     <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
 </head>
 
@@ -75,7 +76,10 @@
             <div class="container">
                 <!--TODO: todo esto debe venir del servidor, ya que son elementos escogidos en la pagina -->
                 <label id="usuarioConectado">Nombre Usuario Conectado</label>
-                <table>
+                <br>
+                <br>
+                <br>
+                <!--<table>
                     <tr>
                         <th>Item</th>
                         <th id="producto">Producto</th>
@@ -105,8 +109,8 @@
                         <td>6.95 €</td>
                     </tr>
                 </table>
-                <label id="precioTotal"> TOTAL : 36.85</label>
-                <input type="button" value="Check" onclick="checkFormCarrito()">
+                <label id="precioTotal"> TOTAL : 36.85 </label>-->
+                <input type="button" onclick="location.href='cart.html';" value="Ver Carrito" />
            </div>
             <div class="container" style="background-color:#f1f1f1">
                 <button id="btnCancelarCheck" type="button" class="cancelbtn" onclick="cancelFormCarrito()">Cancel</button>
@@ -249,22 +253,65 @@
 
     <article class="column middle" id="contenedorImagenes">
 
-        <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
-        <!--<img id="img_material" src="assets/imagenes/material_1.jpg" /> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
-            Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-            Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-            Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DE VISUALIZACION
-                DE LAS IMAGENES DE LOS PRODUCTOS</p>
+
+        <div id="slides">
+            <img src="https://www.modaes.es/thumb/max/727x356/files//000_2016/0109recursos/Corredor%20728.jpg">
+            <img src="http://www.practicodeporte.com/wp-content/uploads/2016/03/decathlon-630x330.jpg">
+            <img src="https://mundoentrenamiento.com/wp-content/uploads/nadador-en-los-JJOO.jpg">
+        </div>
+
     </article>
 
     <article class="column side" id="contenedorMapa">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
-                Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-                Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-                Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DEL MAPA DE LAS TIENDAS
-                </p>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 28.0716607, lng: -15.4538076};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC47HElbJq-vhGOmssUcioyZusV0wurYoI&callback=initMap">
+        </script>
     </article>
+
+    <div id="site">
+    <div id="content">
+        <div id="products">
+            <ul>
+                <li>
+                    <div class="product-image">
+                        <img src="assets/imagenes/wine1.jpg" alt="" />
+                    </div>
+                    <div class="product-description" data-name="Wine #1" data-price="5">
+                        <h3 class="product-name">Vino Coto</h3>
+                        <p class="product-price">&euro; 5</p>
+                        <form class="add-to-cart" method="post">
+                            <div>
+                                <label for="qty-1">Cantidad</label>
+                                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                            </div>
+                            <p><input type="submit" value="Add to cart" class="btn" onclick="checkFormCarrito()"/></p>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
 
     <article class="column side" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
@@ -361,12 +408,30 @@
     </nav>
 
     <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="assets/js/jquery.slides.js"></script>
+    <script>
+        $(function() {
+            $('#slides').slidesjs({
+                width: 940,
+                height: 470,
+                play: {
+                    active: true,
+                    auto: true,
+                    interval: 4000,
+                    swap: true
+                }
+            });
+        });
+    </script>
 
     <!--<script src="assets/js/jquery-2.0.3.min.js"></script>-->
     <!--<script src="assets/js/jquery.raptorize.2.0.js"></script>-->
     <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/modalLogin.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/modalCarrito.js" language="JavaScript" type="text/javascript"></script>
+    <script src="assets/js/jquery.shop.js" language="JavaScript" type="text/javascript"></script>
+
 </footer>
 </body>
 </html>
