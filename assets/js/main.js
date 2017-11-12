@@ -103,7 +103,6 @@ function iraFormulario(elemento) {
 
 }
 
-
 function selectCheckValidity() {
     return elementoSelect.selectedIndex > 0;
 }
