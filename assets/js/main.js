@@ -25,7 +25,7 @@ var formLogin = document.getElementById('formLoginModal');
 var btnLogin = document.getElementById('btnLogin');
 
 //var botonLoginRegistro = document.getElementById('submitFormLogin');
-var carrito = document.getElementById('carrito')
+var carrito = document.getElementById('carrito');
 var modalCarrito = document.getElementById('modalCarrito');
 
 var opcionMenu, ulContenedor;
@@ -58,12 +58,15 @@ function iraFormulario(elemento) {
     ulContenedor = elemento.parentNode.parentNode;
     opcionMenu = elemento.innerHTML.toLowerCase();
 
-//    console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre( ulContenedor.id ): " + ulContenedor.id);
-//    console.log("tipo_ropa innerHTML: " + document.getElementById("tipo_ropa").innerHTML);
+    /* Guardamos la 'cookie'*/
+    document.cookie = "opcion="+opcionMenu;
+
+    console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre( ulContenedor.id ): " + ulContenedor.id);
+    // console.log("tipo_ropa innerHTML: " + document.getElementById("tipo_ropa").innerHTML);
+
     /**/
 
     seccionContenedores.style.display = "none";
-
 
     if ( ulContenedor.id == "deportes" ) {
 
@@ -106,22 +109,24 @@ function selectCheckValidity() {
 }
 
 function validaFormularioDeportes(event) {
-    // event.preventDefault();
 
     console.log("validaFormularioDeportes");
 
     /*
-    console.log("validaFormularioDeportes, select.value: " + elementoSelect.selectedIndex +
-        ",  checkValidity: " + elementoSelect.checkValidity() +
-        ",  validity.valueMissing: " + elementoSelect.validity.valueMissing);
+        console.log("validaFormularioDeportes, select.value: " + elementoSelect.selectedIndex +
+                                    ",  checkValidity: " + elementoSelect.checkValidity() +
+                                    ",  validity.valueMissing: " + elementoSelect.validity.valueMissing);
     */
 
     if ( ! selectCheckValidity() ) {
+        // event.preventDefault();
+
         elementoSelect.setCustomValidity('Este campo es obligatorio');
     } else {
         console.log("formDeportes.submit");
+
         formDeportes.submit;
-        return true;
+        // return true;
     }
 
 }
@@ -129,7 +134,7 @@ function validaFormularioDeportes(event) {
 enviarSeleccionDeportes.addEventListener('click', validaFormularioDeportes, false);
 
 
-function validaFormulario() {
+function validaFormulario(event) {
     console.log("validaFormulario");
 
     /**/
@@ -182,8 +187,12 @@ function validaFormulario() {
     }
 
 
-    if ( error )
+    if ( error ) {
+        event.preventDefault();
+
         alert("Algun/os campo/s no están cumplimentado/s");
+    }
+
 }
 
 formSeleccion.addEventListener('submit', validaFormulario, false);
