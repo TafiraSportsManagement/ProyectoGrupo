@@ -259,11 +259,29 @@
     </article>
 
     <article class="column side" id="contenedorMapa">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
-                Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-                Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-                Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DEL MAPA DE LAS TIENDAS
-                </p>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 28.0716607, lng: -15.4538076};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC47HElbJq-vhGOmssUcioyZusV0wurYoI&callback=initMap">
+        </script>
     </article>
 
     <article class="column side" id="contenedorVideo">
