@@ -1,6 +1,6 @@
 
 var seccionSeleccion = document.getElementById('seccionSeleccion');
-
+var contenedorItem = document.getElementById('contenedorItem')
 var navDeportes = document.getElementById('navDeportes');
 //var navMarcas = document.getElementById('navMarcas');
 var navHombre = document.getElementById('navHombre');
@@ -12,6 +12,7 @@ function mostrarFormularioSeleccion() {
     seccionLogin.style.display = "none";
     seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
+    contenedorItem.style.display = "none";
     seccionSeleccion.style.display = "block";
 }
 

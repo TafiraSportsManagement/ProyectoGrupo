@@ -34,7 +34,7 @@ var formDeportes = document.getElementById('formSeleccionDeportes');
 
 var elementoSelect = document.getElementById("deporte_articulo");
 var enviarSeleccionDeportes = document.getElementById("enviarSeleccionDeportes");
-
+var contenedorItem = document.getElementById('contenedorItem')
 
 function mostrarFormularioLogin(event) {
     console.log("mostrarFormularioLogin");
@@ -67,6 +67,7 @@ function iraFormulario(elemento) {
     /**/
 
     seccionContenedores.style.display = "none";
+    contenedorItem.style.display = "none";
 
     if ( ulContenedor.id == "deportes" ) {
 

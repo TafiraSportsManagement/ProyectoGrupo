@@ -184,20 +184,45 @@
 
 </nav>
 
+
+
 <section class="row" id="seccionContenedores">
 
-    <article class="column middle" id="contenedorImagenes">
+    <div id="slides">
+        <img src="https://www.modaes.es/thumb/max/727x356/files//000_2016/0109recursos/Corredor%20728.jpg">
+        <img src="http://www.practicodeporte.com/wp-content/uploads/2016/03/decathlon-630x330.jpg">
+        <img src="https://mundoentrenamiento.com/wp-content/uploads/nadador-en-los-JJOO.jpg">
+    </div>
 
-
-        <div id="slides">
-            <img src="https://www.modaes.es/thumb/max/727x356/files//000_2016/0109recursos/Corredor%20728.jpg">
-            <img src="http://www.practicodeporte.com/wp-content/uploads/2016/03/decathlon-630x330.jpg">
-            <img src="https://mundoentrenamiento.com/wp-content/uploads/nadador-en-los-JJOO.jpg">
+    <article class="column "id="contenerdorItem">
+        <div id="site">
+            <div id="content">
+                <div id="products">
+                    <ul>
+                        <li>
+                            <div class="product-image">
+                                <img src="assets/imagenes/maleta1.jpg" alt="" />
+                            </div>
+                            <div class="product-description" data-name="Maleta #1" data-price="5">
+                                <h3 class="product-name">Maleta de Deporte</h3>
+                                <p class="product-price">&euro; 5</p>
+                                <form class="add-to-cart" method="post">
+                                    <div>
+                                        <label for="qty-1">Cantidad</label>
+                                        <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                                    </div>
+                                    <p><input type="submit" value="Add to cart" class="btn" onclick="checkFormCarrito()"/></p>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </article>
 
-    <article class="column side" id="contenedorMapa">
+    <article class="column middle" id="contenedorMapa">
         <style>
             #map {
                 height: 400px;
@@ -223,37 +248,12 @@
         </script>
     </article>
 
-    <div id="site">
-    <div id="content">
-        <div id="products">
-            <ul>
-                <li>
-                    <div class="product-image">
-                        <img src="assets/imagenes/maleta1.jpg" alt="" />
-                    </div>
-                    <div class="product-description" data-name="Maleta #1" data-price="5">
-                        <h3 class="product-name">Maleta de Deporte</h3>
-                        <p class="product-price">&euro; 5</p>
-                        <form class="add-to-cart" method="post">
-                            <div>
-                                <label for="qty-1">Cantidad</label>
-                                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-                            </div>
-                            <p><input type="submit" value="Add to cart" class="btn" onclick="checkFormCarrito()"/></p>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </div>
-
     <article class="column side" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
-            <!--
+
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
-            -->
+
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3><output id="tituloVideo" content=""></output></h3>
