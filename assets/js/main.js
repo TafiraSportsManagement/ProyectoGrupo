@@ -67,7 +67,6 @@ function iraFormulario(elemento) {
     /**/
 
     seccionContenedores.style.display = "none";
-    contenedorItem.style.display = "none";
 
     if ( ulContenedor.id == "deportes" ) {
 

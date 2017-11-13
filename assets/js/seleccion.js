@@ -12,7 +12,6 @@ function mostrarFormularioSeleccion() {
     seccionLogin.style.display = "none";
     seccionRegistro.style.display = "none";
     seccionContenedores.style.display = "none";
-    contenedorItem.style.display = "none";
     seccionSeleccion.style.display = "block";
 }
 
