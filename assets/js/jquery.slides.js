@@ -77,7 +77,8 @@
       $(".slidesjs-container", $element).wrapInner("<div class='slidesjs-control'>", $element).children();
       $(".slidesjs-control", $element).css({
         position: "relative",
-        left: 0
+        left: 0,
+          zIndex: 0,
       });
       $(".slidesjs-control", $element).children().addClass("slidesjs-slide").css({
         position: "absolute",
