@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tienda de deportes</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="assets/css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.shop.js"></script>
+</head>
+
+<body id="checkout-page">
+
+<div id="site">
+	<div id="content">
+		<h1>Listado de Productos</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Producto</th>
+					<th scope="col">Cantidad</th>
+					<th scope="col">Precio</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping">
+				<strong>Envío</strong>: <span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <form action="order.html" method="post" id="checkout-order-form">
+		 	<h2>Datos del cliente y de envío</h2>
+		 	
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Datos de Compra</legend>
+		 		<div>
+		 			<label for="name">Nombre</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="email">Email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city">Ciudad</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address">Dirección</label>
+		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="zip">Código ZIP</label>
+		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="country">Ciudad</label>
+		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Elegir</option>
+		 				<option value="ES">España</option>
+		 				<option value="IT">Italy</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<div id="shipping-same">Mismos datos de compra para el envío <input type="checkbox" id="same-as-billing" value=""/></div>
+		 	
+		 	<fieldset id="fieldset-shipping">
+		 		
+		 		<legend>Datos de Envío</legend>
+		 		
+		 		<div>
+		 			<label for="sname">Nombre</label>
+		 			<input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="semail">Email</label>
+		 			<input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="scity">Ciudad</label>
+		 			<input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="saddress">Dirección</label>
+		 			<input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="szip">Código ZIP</label>
+		 			<input type="text" name="szip" id="szip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="scountry">Ciudad</label>
+		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Elegir</option>
+		 				<option value="ES">España</option>
+		 				<option value="IT">Italy</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+
+
+			 <ul id="shopping-cart-actions">
+				 <li>
+					 <input type="submit" id="submit-order" value="Enviar" class="btn" />
+				 </li>
+				 <li>
+					 <a href="main.html" class="btn">Continuar Comprando</a>
+				 </li>
+				 <li>
+					 <a href="cart.html" class="btn">Atrás</a>
+				 </li>
+			 </ul>
+
+		 
+		 </form>
+	</div>
+	
+	
+
+</div>
+
+</body>
+</html>	

@@ -166,11 +166,12 @@
 .column.side{
     width: 25%;
 }
+
 .column.middle{
     width: 45%;
 }
 .row{
-    margin-top: 2%;
+    margin-top: 4%;
     margin-left: 6%;
 }
 .row:after {
@@ -228,14 +229,158 @@
     display: none;
 }
 
+
+/* Estilos para Formularios */
+
+section form legend {
+    float: left;
+    margin-left: 105px;
+    margin-bottom: 20px;
+
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+section form label{
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+section form input, select, span {
+    float: left;
+    margin-bottom: 10px;
+}
+
+[type="submit"] {
+    clear: left;
+    margin: 20px 0 0 110px;
+    font-size: 18px
+}
+
+
+
 #seccionSeleccion{
     display: none;
 }
 
-
 /* .error select {   #ffa995; */
 .campoErroneo {
     border: 2px solid #ff9485;
+}
+
+
+/* CARRUSEL DE FOTOS */
+
+#slides {
+    display: none;
+    width: 50%;
+    float: right;
+    margin-right: 29%;
+    margin-bottom: 2%;
+}
+
+#slides .slidesjs-navigation {
+    margin-top:5px;
+}
+
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+    background-image: url('../imagenes/btns-next-prev.png');
+    background-repeat: no-repeat;
+    display:block;
+    width:12px;
+    height:18px;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+    margin-right:5px;
+}
+
+a.slidesjs-next {
+    margin-right:10px;
+    background-position: -12px 0;
+}
+
+a:hover.slidesjs-next {
+    background-position: -12px -18px;
+}
+
+a.slidesjs-previous {
+    background-position: 0 0;
+}
+
+a:hover.slidesjs-previous {
+    background-position: 0 -18px;
+}
+
+a.slidesjs-play {
+    width:15px;
+    background-position: -25px 0;
+}
+
+a:hover.slidesjs-play {
+    background-position: -25px -18px;
+}
+
+a.slidesjs-stop {
+    width:18px;
+    background-position: -41px 0;
+}
+
+a:hover.slidesjs-stop {
+    background-position: -41px -18px;
+}
+
+.slidesjs-pagination {
+    margin: 7px 0 0;
+    float: right;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url( '../imagenes/pagination.png');
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+    background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+    color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+    color: #9e2020
+}
+
+.navbar {
+    overflow: hidden
 }
 
 /*  */
@@ -261,11 +406,14 @@ header {
 
 footer {
     background-color: #f1f1f1;
-    padding: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 45px;
     text-align: center;
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
+    z-index: 0;
     height: 100px;
     width: 100%;
     overflow:hidden;

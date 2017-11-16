@@ -5,18 +5,23 @@
     <meta name=”keywords” content=”HTML5,CSS3,Javascript”>
     <title>Tienda de deportes</title>
     <!--Normaliza todos los navegadores-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/modalLogin.css">
-    <link rel="stylesheet" href="assets/css/modalCarrito.css">
-    <link rel="stylesheet" href="assets/css/pro_dropdown_3.css" />
 
+    <!-- <link rel="stylesheet" href="assets/css/normalize.css">-->
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link rel="stylesheet" href="assets/css/modal.css"> -->
 
     <!-- <link rel="stylesheet" href="assets/css/register.css"> -->
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/pro_dropdown_3.css" />
+    <script src="assets/js/stuHover.js" type="text/javascript"></script>
+
 </head>
 
-<body id="main-container">
+<body id="">
 
 <header>
     <div class="titulo">
@@ -53,6 +58,7 @@
         </div>
     </div>
 
+
     <div id="modalLogin" class="modal">
         <form id="formLoginModal" class="formLoginModal">
             <div class="container">
@@ -62,78 +68,30 @@
                 <label for="contraseñaLogin">Contraseña</label>
                 <input id="contraseñaLogin" type="password" placeholder="contraseña" required/>
                 <br/>
-                <input type="button" value="Login" onclick="checkFormLogin()">
-                <!--<button id="btnLogin" onclick="check()">Login</button>-->
+                <button id="btnLogin" type="button">Login</button>
                 <input type="checkbox" checked="checked"/> Remember me
             </div>
             <div class="container" style="background-color:#f1f1f1">
-                <button id="btnCancelarLogin" type="button" class="cancelbtn" onclick="cancelFormularioLogin()">Cancel</button>
+                <button id="btnCancelarLogin" type="button" class="cancelbtn">Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
     </div>
 
-    <div id="modalCarrito" class="modal">
-        <form id="formCarritoModal" class="formCarritoModal">
-            <div class="container">
-                <!--TODO: todo esto debe venir del servidor, ya que son elementos escogidos en la pagina -->
-                <label id="usuarioConectado">Nombre Usuario Conectado</label>
-                <br>
-                <br>
-                <br>
-                <!--<table>
-                    <tr>
-                        <th>Item</th>
-                        <th id="producto">Producto</th>
-                        <th id="descripcion">Descripcion</th>
-                        <th id="cantidad">Cantidad</th>
-                        <th id="precio">Precio</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Camiseta Montaña</td>
-                        <td>"Camiseta de especial uso para montaña, hombre, talla L"</td>
-                        <td>1</td>
-                        <td>10.95 €</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pantalón montaña</td>
-                        <td>"Pantalón de especial uso para montaña, hombre, talla 44"</td>
-                        <td>1</td>
-                        <td>18.95 €</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cantimplora</td>
-                        <td>"Cantimplora aluminio termica, azul, 1.5 L"</td>
-                        <td>1</td>
-                        <td>6.95 €</td>
-                    </tr>
-                </table>
-                <label id="precioTotal"> TOTAL : 36.85 </label>-->
-                <input type="button" onclick="location.href='cart.html';" value="Ver Carrito" />
-           </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button id="btnCancelarCheck" type="button" class="cancelbtn" onclick="cancelFormCarrito()">Cancel</button>
-                <span class="psw">¿Alguna duda con el <a href="#">pago?</a></span>
-            </div>
-       </form>
-   </div>
-
 </header>
+
 
 <nav>
     <!--
-         El contenido de ese elemento <nav></nav> que permite visualizar los menus desplegables
-         está tomado de: http://www.stunicholls.com
-       -->
+        El contenido de ese elemento <nav></nav> que permite visualizar los menus desplegables
+        está tomado de: http://www.stunicholls.com
+      -->
     <span class="preload1"></span>
     <span class="preload2"></span>
 
     <ul id="nav">
         <li class="top">
-            <a href="main.html" class="top_link"><span>Inicio</span></a>
+            <a href="pruebaMain.html" class="top_link"><span>Inicio</span></a>
         </li>
         <li class="top">
             <a href="#2" class="top_link"><span class="down">Deportes</span></a>
@@ -176,88 +134,48 @@
             </ul>
         </li>
     </ul>
-</nav>
 
+</nav>
 
 <nav id="navegacion_secundaria">
     <!-- TODO: aqui deberían ir los elementos (botones o lo que sea) asociados a este otro nivel de navegacion -->
 
 </nav>
 
-
-
 <section class="row" id="seccionContenedores">
 
-    <div id="slides">
-        <img src="https://www.modaes.es/thumb/max/727x356/files//000_2016/0109recursos/Corredor%20728.jpg">
-        <img src="http://www.practicodeporte.com/wp-content/uploads/2016/03/decathlon-630x330.jpg">
-        <img src="https://mundoentrenamiento.com/wp-content/uploads/nadador-en-los-JJOO.jpg">
-    </div>
+    <article class="column middle" id="contenedorImagenes">
 
-    <article class="column "id="contenerdorItem">
-        <div id="site">
-            <div id="content">
-                <div id="products">
-                    <ul>
-                        <div class="product-image">
-                                <img src="assets/imagenes/maleta1.jpg" alt="" />
-                            </div>
-                            <div class="product-description" data-name="Maleta #1" data-price="5">
-                                <h3 class="product-name">Maleta de Deporte</h3>
-                                <p class="product-price">&euro; 5</p>
-                                <form class="add-to-cart" method="post">
-                                    <div>
-                                        <label for="qty-1">Cantidad</label>
-                                        <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-                                    </div>
-                                    <p><input type="submit" value="Añadir al carrito" class="btn" onclick="checkFormCarrito()"/></p>
-                                </form>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+        <!-- TODO: desde Javascript permitir que la imagen visualizada rote a partir de un conjunto de ellas -->
+        <!--<img id="img_material" src="assets/imagenes/material_1.jpg" /> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+            Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+            Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+            Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DE VISUALIZACION
+            DE LAS IMAGENES DE LOS PRODUCTOS</p>
     </article>
 
-    <article class="column middle" id="contenedorMapa">
-        <style>
-            #map {
-                height: 400px;
-                width: 100%;
-            }
-        </style>
-        <div id="map"></div>
-        <script>
-            function initMap() {
-                var uluru = {lat: 28.0716607, lng: -15.4538076};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC47HElbJq-vhGOmssUcioyZusV0wurYoI&callback=initMap">
-        </script>
+    <article class="column side" id="contenedorMapa">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+            Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+            Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+            Praesent scelerisque tortor sed accumsan convallis. ESTA SERA LA SECCION DEL MAPA DE LAS TIENDAS
+        </p>
     </article>
 
     <article class="column side" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
-
+            <!--
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
-
+            -->
             <p>Lo siento, su navegador no soporta video</p>
         </video>
         <h3><output id="tituloVideo" content=""></output></h3>
     </article>
 
 </section>
+
 
 <section id="seccionSeleccion">
 
@@ -419,6 +337,7 @@
 
 </section>
 
+
 <footer>
     <nav class="botnav">
         <a id="primero" href="javascript:void(0)">Quienes somos</a>
@@ -433,32 +352,11 @@
     </nav>
 
     <script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="assets/js/jquery.slides.js"></script>
-    <script>
-        $(function() {
-            $('#slides').slidesjs({
-                width: 940,
-                height: 470,
-                play: {
-                    active: true,
-                    auto: true,
-                    interval: 4000,
-                    swap: true
-                }
-            });
-        });
-    </script>
 
     <!--<script src="assets/js/jquery-2.0.3.min.js"></script>-->
     <!--<script src="assets/js/jquery.raptorize.2.0.js"></script>-->
     <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/modalLogin.js" language="JavaScript" type="text/javascript"></script>
-    <script src="assets/js/modalCarrito.js" language="JavaScript" type="text/javascript"></script>
-    <script src="assets/js/jquery.shop.js" language="JavaScript" type="text/javascript"></script>
-    <script src="assets/js/stuHover.js" type="text/javascript"></script>
-
-
 </footer>
 </body>
 </html>

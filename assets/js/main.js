@@ -25,9 +25,16 @@ var formLogin = document.getElementById('formLoginModal');
 var btnLogin = document.getElementById('btnLogin');
 
 //var botonLoginRegistro = document.getElementById('submitFormLogin');
+var carrito = document.getElementById('carrito');
+var modalCarrito = document.getElementById('modalCarrito');
 
 var opcionMenu, ulContenedor;
 
+var formDeportes = document.getElementById('formSeleccionDeportes');
+
+var elementoSelect = document.getElementById("deporte_articulo");
+var enviarSeleccionDeportes = document.getElementById("enviarSeleccionDeportes");
+var contenedorItem = document.getElementById('contenedorItem')
 
 function mostrarFormularioLogin(event) {
     console.log("mostrarFormularioLogin");
@@ -37,50 +44,13 @@ function mostrarFormularioLogin(event) {
 
 log.addEventListener('click', mostrarFormularioLogin, false);
 
-/*
-function procesarLogOut(event) {
-
-    console.log("procesarLogOut");
-
-    if ( event.submit ) {
-        login.style.display = "none";
-        logout.style.display = "block";
-    } else {
-        if ( event.onclick ) {
-            logout.style.display = "none";
-            login.style.display = "block";
-        }
-    }
-
+function mostrarCarritoModal(){
+    console.log("mostrarCarritoModal");
+    modalCarrito.style.display = "block";
 }
 
-formLogin.addEventListener('submit', procesarLogOut, false);
-//btnLogin.addEventListener('click', procesarLogOut, false);
-salir.addEventListener('click', procesarLogOut, false);
-*/
+carrito.addEventListener('click', mostrarCarritoModal, false);
 
-/*
-function logOut(event) {
-
-    var elementoFuente = event.target || event.srcElement;
-    if ( elementoFuente.id == salir.id ) {
-        document.getElementById('usuario').value = "";
-        document.getElementById('contraseña').value = "";
-        document.getElementById('repContraseña').value = "";
-
-        logout.style.display = "none";
-        login.style.display = "block";
-    } else {
-        logout.style.display = "block";
-        login.style.display = "none";
-    }
-
-}
-
-salir.addEventListener('click', logOut, false);
-*/
-
-var formDeportes = document.getElementById("formSeleccionDeportes");
 
 function iraFormulario(elemento) {
     console.log("iraFormulario");
@@ -88,12 +58,15 @@ function iraFormulario(elemento) {
     ulContenedor = elemento.parentNode.parentNode;
     opcionMenu = elemento.innerHTML.toLowerCase();
 
-    console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre -> ulContenedor.id: " + ulContenedor.id);
+    /* Guardamos la 'cookie'*/
+    document.cookie = "opcion="+opcionMenu;
+
+    console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre( ulContenedor.id ): " + ulContenedor.id);
+    // console.log("tipo_ropa innerHTML: " + document.getElementById("tipo_ropa").innerHTML);
 
     /**/
 
     seccionContenedores.style.display = "none";
-
 
     if ( ulContenedor.id == "deportes" ) {
 
@@ -130,38 +103,37 @@ function iraFormulario(elemento) {
 
 }
 
-
-var elementoSelect = document.getElementById("deporte_articulo");
-var enviarSeleccionDeportes = document.getElementById("enviarSeleccionDeportes");
-
 function selectCheckValidity() {
     return elementoSelect.selectedIndex > 0;
 }
 
 function validaFormularioDeportes(event) {
-//    event.preventDefault();
 
     console.log("validaFormularioDeportes");
 
-    console.log("validaFormularioDeportes, select.value: " + elementoSelect.selectedIndex +
-    ",  checkValidity: " + elementoSelect.checkValidity() +
-    ",  validity.valueMissing: " + elementoSelect.validity.valueMissing);
+    /*
+        console.log("validaFormularioDeportes, select.value: " + elementoSelect.selectedIndex +
+                                    ",  checkValidity: " + elementoSelect.checkValidity() +
+                                    ",  validity.valueMissing: " + elementoSelect.validity.valueMissing);
+    */
 
     if ( ! selectCheckValidity() ) {
+        // event.preventDefault();
+
         elementoSelect.setCustomValidity('Este campo es obligatorio');
     } else {
         console.log("formDeportes.submit");
-//        formDeportes.action = "http://localhost:63342/ProyectoGrupo/pruebaMain.html";
+
         formDeportes.submit;
-        return true;
+        // return true;
     }
 
 }
 
-enviarSeleccionDeportes.addEventListener('click', validaFormularioDeportes, true);
+enviarSeleccionDeportes.addEventListener('click', validaFormularioDeportes, false);
 
 
-function validaFormulario() {
+function validaFormulario(event) {
     console.log("validaFormulario");
 
     /**/
@@ -214,13 +186,15 @@ function validaFormulario() {
     }
 
 
-    if ( error )
+    if ( error ) {
+        event.preventDefault();
+
         alert("Algun/os campo/s no están cumplimentado/s");
+    }
+
 }
 
 formSeleccion.addEventListener('submit', validaFormulario, false);
-//submitFormSeleccion.addEventListener('submit', procesaFormulario, false);
-
 
 
 function restablecerContenido() {
