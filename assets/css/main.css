@@ -232,6 +232,12 @@
     display: none;
 }
 
+
+/* .error select {   #ffa995; */
+.campoErroneo {
+    border: 2px solid #ff9485;
+}
+
 /*  */
 
 /*----ETIQUITAS GLOBALES (TAGS)-----*/
