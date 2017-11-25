@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Winery: Checkout</title>
+<title>Tienda de deportes</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" href="assets/css/style.css" media="screen" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11,11 +11,8 @@
 <body id="checkout-page">
 
 <div id="site">
-	<header id="masthead">
-		<h1>Winery <span class="tagline">Wines for web developers since 1999</h1>
-	</header>
 	<div id="content">
-		<h1>Checkout</h1>
+		<h1>Listado de Productos</h1>
 			<table id="checkout-cart" class="shopping-cart">
 			  <thead>
 				<tr>
@@ -40,7 +37,7 @@
 		 </div>
 		 
 		 <form action="order.html" method="post" id="checkout-order-form">
-		 	<h2>Detalles</h2>
+		 	<h2>Datos del cliente y de envío</h2>
 		 	
 		 	<fieldset id="fieldset-billing">
 		 		<legend>Datos de Compra</legend>
@@ -68,17 +65,17 @@
 		 			<label for="country">Ciudad</label>
 		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
 		 				<option value="">Elegir</option>
-		 				<option value="US">España</option>
+		 				<option value="ES">España</option>
 		 				<option value="IT">Italy</option>
 		 			</select>
 		 		</div>
 		 	</fieldset>
 		 	
-		 	<div id="shipping-same">Mismos datos de compra <input type="checkbox" id="same-as-billing" value=""/></div>
+		 	<div id="shipping-same">Mismos datos de compra para el envío <input type="checkbox" id="same-as-billing" value=""/></div>
 		 	
 		 	<fieldset id="fieldset-shipping">
 		 		
-		 		<legend>Envío</legend>
+		 		<legend>Datos de Envío</legend>
 		 		
 		 		<div>
 		 			<label for="sname">Nombre</label>
@@ -104,13 +101,25 @@
 		 			<label for="scountry">Ciudad</label>
 		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
 		 				<option value="">Elegir</option>
-		 				<option value="US">España</option>
+		 				<option value="ES">España</option>
 		 				<option value="IT">Italy</option>
 		 			</select>
 		 		</div>
 		 	</fieldset>
-		 	
-		 	<p><input type="submit" id="submit-order" value="Enviar" class="btn" /></p>
+
+
+			 <ul id="shopping-cart-actions">
+				 <li>
+					 <input type="submit" id="submit-order" value="Enviar" class="btn" />
+				 </li>
+				 <li>
+					 <a href="main.html" class="btn">Continuar Comprando</a>
+				 </li>
+				 <li>
+					 <a href="cart.html" class="btn">Atrás</a>
+				 </li>
+			 </ul>
+
 		 
 		 </form>
 	</div>
@@ -118,10 +127,6 @@
 	
 
 </div>
-
-<footer id="site-info">
-		Copyright &copy; Winery
-	</footer>
 
 </body>
 </html>	
