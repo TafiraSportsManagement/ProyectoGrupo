@@ -132,7 +132,7 @@
 					var country = this.storage.getItem( "billing-country" );
 					
 					var html = "<div class='detail'>";
-						html += "<h2>Billing and Shipping</h2>";
+						html += "<h2>Facturación y Envío</h2>";
 						html += "<ul>";
 						html += "<li>" + name + "</li>";
 						html += "<li>" + email + "</li>";
@@ -159,7 +159,7 @@
 					var sCountry = this.storage.getItem( "shipping-country" );
 					
 					var html = "<div class='detail'>";
-						html += "<h2>Billing</h2>";
+						html += "<h2>Facturación</h2>";
 						html += "<ul>";
 						html += "<li>" + name + "</li>";
 						html += "<li>" + email + "</li>";
@@ -170,7 +170,7 @@
 						html += "</ul></div>";
 						
 						html += "<div class='detail right'>";
-						html += "<h2>Shipping</h2>";
+						html += "<h2>Envío</h2>";
 						html += "<ul>";
 						html += "<li>" + sName + "</li>";
 						html += "<li>" + sEmail + "</li>";

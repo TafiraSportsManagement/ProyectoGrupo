@@ -166,11 +166,12 @@
 .column.side{
     width: 25%;
 }
+
 .column.middle{
     width: 45%;
 }
 .row{
-    margin-top: 2%;
+    margin-top: 4%;
     margin-left: 6%;
 }
 .row:after {
@@ -276,7 +277,11 @@ section form input, select, span {
 /* CARRUSEL DE FOTOS */
 
 #slides {
-    display: none
+    display: none;
+    width: 50%;
+    float: right;
+    margin-right: 29%;
+    margin-bottom: 2%;
 }
 
 #slides .slidesjs-navigation {
@@ -402,11 +407,13 @@ header {
 footer {
     background-color: #f1f1f1;
     padding-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 45px;
     text-align: center;
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
+    z-index: 0;
     height: 100px;
     width: 100%;
     overflow:hidden;
