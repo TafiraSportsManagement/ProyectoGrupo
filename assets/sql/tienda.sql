@@ -84,11 +84,15 @@ CREATE TABLE `factura` (
 
 CREATE TABLE `item` (
   `id_item` int(11) NOT NULL,
-  `id_tipoproducto` int(11) DEFAULT NULL,
-  `id_producto` int(11) DEFAULT NULL,
-  `id_edad` int(11) DEFAULT NULL,
-  `id_sexo` int(11) DEFAULT NULL,
-  `id_deporte` int(11) DEFAULT NULL,
+  `id_producto` int(11) NOT NULL,
+
+--  `id_tipoproducto` int(11) DEFAULT NULL,
+--  `id_edad` int(11) DEFAULT NULL,
+--  `id_sexo` int(11) DEFAULT NULL,
+--  `id_deporte` int(11) DEFAULT NULL,
+
+  FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,6 +103,7 @@ CREATE TABLE `item` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL AUTO_INCREMENT,
+  `id_tipoproducto` int(11) NOT NULL,
   `id_marca` int(11) NOT NULL,
 
   `modelo` varchar(20) NOT NULL,
@@ -107,24 +112,29 @@ CREATE TABLE `producto` (
   `tallaminima` varchar(3) DEFAULT NULL,
   `tallamaxima` varchar(3) DEFAULT NULL,
 
+  `id_sexo` int(11) DEFAULT NULL,
+  `id_edad` int(11) DEFAULT NULL,
+  `id_deporte` int(11) DEFAULT NULL,
+
   `nombre` varchar(20) NOT NULL,
   `precio` varchar(10) NOT NULL,
 
   PRIMARY KEY(id_producto),
+  FOREIGN KEY (id_tipoproducto) REFERENCES tipoproducto(id_tipoproducto),
   FOREIGN KEY (id_marca) REFERENCES marca(id_marca)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `producto` (`id_marca`,`nombre`, `modelo`, `tallaminima`, `tallamaxima`, `precio`) VALUES
-(1, 'camiseta', 'k20', '34', '48', '30'),
-(2, 'camiseta', 'k21', '34', '48', '32'),
-(3, 'camiseta', 'k33', '36', '48', '29'),
-(4, 'pantalon', 'MAN', '36', '52', '40'),
-(5, 'jersey', 'JSY', '36', '48', '35'),
-(5, 'balon', 'DPlaya', null, null, '20'),
-(4, 'bota', 'striker', '36', '50', '55'),
-(3, 'playera', 'rider', '36', '50', '79'),
-(2, 'mochila', 'XHS', 's', 'xl', '36'),
-(1, 'reloj', 'marker', null, null, '63');
+INSERT INTO `producto` (`id_marca`,`nombre`, `modelo`, `tallaminima`, `tallamaxima`, `precio`, `id_sexo`, `id_edad`, `id_deporte`) VALUES
+(1, 'camiseta', 'k20', '34', '48', '30', '1', null, '1'),
+(2, 'camiseta', 'k21', '34', '48', '32', '2', null, '3'),
+(3, 'camiseta', 'k33', '36', '48', '29', '1', null, '1'),
+(4, 'pantalon', 'MAN', '36', '52', '40', '1', null, '2'),
+(5, 'jersey', 'JSY', '36', '48', '35', '2', null, '2'),
+(5, 'balon', 'DPlaya', null, null, '20', '1', null, '1'),
+(4, 'bota', 'striker', '36', '50', '55', '2', null, '2'),
+(3, 'playera', 'rider', '36', '50', '79', '1', null, '3'),
+(2, 'mochila', 'XHS', 's', 'xl', '36', '1', null, null),
+(1, 'reloj', 'marker', null, null, '63', '2', null, null);
 
 
 --
