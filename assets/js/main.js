@@ -59,7 +59,9 @@ function iraFormulario(elemento) {
     opcionMenu = elemento.innerHTML.toLowerCase();
 
     /* Guardamos la 'cookie'*/
+    document.cookie = "navegacion="+ulContenedor.id;
     document.cookie = "opcion="+opcionMenu;
+
 
     console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre( ulContenedor.id ): " + ulContenedor.id);
     // console.log("tipo_ropa innerHTML: " + document.getElementById("tipo_ropa").innerHTML);
