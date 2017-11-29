@@ -113,13 +113,13 @@
                 </table>
                 <label id="precioTotal"> TOTAL : 36.85 </label>-->
                 <input type="button" onclick="location.href='cart.html';" value="Ver Carrito" />
-           </div>
+            </div>
             <div class="container" style="background-color:#f1f1f1">
                 <button id="btnCancelarCheck" type="button" class="cancelbtn" onclick="cancelFormCarrito()">Cancel</button>
                 <span class="psw">¿Alguna duda con el <a href="#">pago?</a></span>
             </div>
-       </form>
-   </div>
+        </form>
+    </div>
 
 </header>
 
@@ -200,18 +200,18 @@
                 <div id="products">
                     <ul>
                         <div class="product-image">
-                                <img src="assets/imagenes/maleta1.jpg" alt="" />
-                            </div>
-                            <div class="product-description" data-name="Maleta #1" data-price="5">
-                                <h3 class="product-name">Maleta de Deporte</h3>
-                                <p class="product-price">&euro; 5</p>
-                                <form class="add-to-cart" method="post">
-                                    <div>
-                                        <label for="qty-1">Cantidad</label>
-                                        <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-                                    </div>
-                                    <p><input type="submit" value="Añadir al carrito" class="btn" onclick="checkFormCarrito()"/></p>
-                                </form>
+                            <img src="assets/imagenes/maleta1.jpg" alt="" />
+                        </div>
+                        <div class="product-description" data-name="Maleta #1" data-price="5">
+                            <h3 class="product-name">Maleta de Deporte</h3>
+                            <p class="product-price">&euro; 5</p>
+                            <form class="add-to-cart" method="post">
+                                <div>
+                                    <label for="qty-1">Cantidad</label>
+                                    <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                                </div>
+                                <p><input type="submit" value="Añadir al carrito" class="btn" onclick="checkFormCarrito()"/></p>
+                            </form>
                         </div>
                     </ul>
                 </div>
@@ -261,33 +261,35 @@
 
 <section id="seccionSeleccion">
 
-    <form id="formSeleccion" action="resultadosMenu.html" method="get">
+    <form id="formSeleccion" action="./assets/php/resultados.php" method="get">
         <fieldset>
             <div id="ropa">
                 <legend>&nbsp;Ropa&nbsp;</legend>
 
                 <label for="tipo_ropa">Tipo</label>
-                <select id="tipo_ropa">
+                <select id="tipo_ropa" name="tipo_ropa">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
-                    <option value="tipo1">Tipo 1</option>
-                    <option value="tipo2">Tipo 2</option>
+                    <option value="camiseta">Camiseta</option>
+                    <option value="pantalon">Pantalon</option>
                 </select>
                 <br/>
 
                 <label for="modelo_ropa">Modelo</label>
-                <select id="modelo_ropa">
+                <select id="modelo_ropa" name="modelo_ropa">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
-                    <option value="modelo1">Modelo 1</option>
-                    <option value="modelo2">Modelo 2</option>
+                    <option value="k20">Modelo 20</option>
+                    <option value="k21">Modelo 21</option>
+                    <option value="k33">Modelo 33</option>
+                    <option value="man">Modelo MAN</option>
                 </select>
                 <br/>
 
                 <label for="marca_ropa">Marca</label>
-                <select id="marca_ropa">
+                <select id="marca_ropa" name="marca_ropa">
                     <option value="" selected></option>
-                    <option value="todas">Todas</option>
+                    <option value="todos">Todas</option>
                     <option value="nike">Nike</option>
                     <option value="adidas">Adidas</option>
                     <option value="puma">Puma</option>
@@ -297,9 +299,9 @@
                 <br/>
 
                 <label for="talla_ropa">Talla</label>
-                <select id="talla_ropa">
+                <select id="talla_ropa" name="talla_ropa">
                     <option value="" selected></option>
-                    <option value="todas">Todas</option>
+                    <option value="todos">Todas</option>
                     <option value="36">36</option>
                     <option value="38">38</option>
                     <option value="40">40</option>
@@ -315,27 +317,26 @@
                 <legend>&nbsp;Calzado&nbsp;</legend>
 
                 <label for="tipo_calzado">Tipo</label>
-                <select id="tipo_calzado">
+                <select id="tipo_calzado" name="tipo_calzado">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
-                    <option value="tipo1">Tipo 1</option>
-                    <option value="tipo2">Tipo 2</option>
+                    <option value="bota">Bota</option>
+                    <option value="playera">Playera</option>
                 </select>
                 <br/>
 
                 <label for="modelo_calzado">Modelo</label>
-                <select id="modelo_calzado">
-                    <option value="" selected></option>
+                <select id="modelo_calzado" name="modelo_calzado">
                     <option value="todos">Todos</option>
-                    <option value="modelo1">Modelo 1</option>
-                    <option value="modelo2">Modelo 2</option>
+                    <option value="striker">Striker</option>
+                    <option value="rider">Rider</option>
                 </select>
                 <br/>
 
                 <label for="marca_calzado">Marca</label>
-                <select id="marca_calzado">
+                <select id="marca_calzado" name="marca_calzado">
                     <option value="" selected></option>
-                    <option value="todas">Todas</option>
+                    <option value="todos">Todas</option>
                     <option value="nike">Nike</option>
                     <option value="adidas">Adidas</option>
                     <option value="puma">Puma</option>
@@ -345,7 +346,7 @@
                 <br/>
 
                 <label for="numero_calzado">Número</label>
-                <select id="numero_calzado">
+                <select id="numero_calzado" name="numero_calzado">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
                     <option value="36">36</option>
@@ -363,27 +364,27 @@
                 <legend>&nbsp;Accesorios&nbsp;</legend>
 
                 <label for="tipo_accesorios">Tipo</label>
-                <select id="tipo_accesorios">
+                <select id="tipo_accesorios" name="tipo_accesorios">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
-                    <option value="tipo1">Tipo 1</option>
-                    <option value="tipo2">Tipo 2</option>
+                    <option value="mochila">Mochila</option>
+                    <option value="reloj">Reloj</option>
                 </select>
                 <br/>
 
                 <label for="modelo_accesorios">Modelo</label>
-                <select id="modelo_accesorios">
+                <select id="modelo_accesorios" name="modelo_accesorios">
                     <option value="" selected></option>
                     <option value="todos">Todos</option>
-                    <option value="modelo1">Modelo 1</option>
-                    <option value="modelo2">Modelo 2</option>
+                    <option value="xhs">XHS</option>
+                    <option value="marker">Marker</option>
                 </select>
                 <br/>
 
                 <label for="marca_accesorios">Marca</label>
-                <select id="marca_accesorios">
+                <select id="marca_accesorios" name="marca_accesorios">
                     <option value="" selected></option>
-                    <option value="todas">Todas</option>
+                    <option value="todos">Todas</option>
                     <option value="nike">Nike</option>
                     <option value="adidas">Adidas</option>
                     <option value="puma">Puma</option>
@@ -395,7 +396,7 @@
             </div>
 
             <br/>
-            <input id="submitFormSeleccion" name="submitFormSeleccion" type="submit" value="Aceptar" />
+            <input id="submitFormSeleccion" type="submit" value="Aceptar" >
         </fieldset>
     </form>
 
