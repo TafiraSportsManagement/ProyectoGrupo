@@ -35,7 +35,7 @@ function onValidarFormularioLogin(event) {
     modalLogin.style.display = "none";
 }
 
-btnLogin.addEventListener('click', onValidarFormularioLogin, false);
+// btnLogin.addEventListener('click', onValidarFormularioLogin, false);
 
 
 

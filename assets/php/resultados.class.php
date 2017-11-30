@@ -18,6 +18,30 @@ class Resultados {
 	}
 
 
+	public function consultaOpcionesFormularioDeporte($deporte, $articulo) {
+
+		$_deporte_ = $this->mMysqli->real_escape_string(trim($deporte));
+		$_articulo_ = $this->mMysqli->real_escape_string(trim($articulo));
+
+		if ( $_deporte_ == null )
+            return 0;
+        if ( $_articulo_ == null )
+            return 0;
+
+        $sql = 'SELECT nombre, modelo, marca, precio FROM producto WHERE id_deporte=(SELECT id_deporte FROM deporte WHERE nombre="'. $_deporte_ . '")';
+		$calificaSQL = '';
+
+		if ( $_articulo_ != 'todos'  ) {
+			$calificaSQL = ' AND id_tipopro=(SELECT id_tipopro FROM tipoproducto WHERE tipopro="'. $_articulo_ .'")';
+		}
+
+		// echo "QUERY:  ".$sql.$calificaSQL;
+
+		return $this->mMysqli->query($sql.$calificaSQL);
+
+	}
+
+
 	public function consultaOpcionesFormulario($navegacion, $opcion, $nombre, $modelo, $marca, $talla) {
 
         $_navegacion_ = $this->mMysqli->real_escape_string(trim($navegacion));
@@ -86,7 +110,6 @@ class Resultados {
 		return $query;
 
 	}
-
 
 }
 ?>

@@ -249,8 +249,10 @@
     <article class="column side" id="contenedorVideo">
         <video controls poster="assets/media/intro.jpg" width="320px" height="240" preload="metadata">
 
+            <!--
             <source src="assets/media/intro.mp4" type="video/mp4">
             <source src="assets/media/intro.webm" type="video/webm">
+            -->
 
             <p>Lo siento, su navegador no soporta video</p>
         </video>
@@ -400,12 +402,12 @@
         </fieldset>
     </form>
 
-    <form id="formSeleccionDeportes" action="resultadosMenu.html" method="get">
+    <form id="formSeleccionDeportes" action="./assets/php/resultados.php" method="get">
         <fieldset>
             <legend>&nbsp;Deportes&nbsp;</legend>
 
             <label for="deporte_articulo">Tipo de artículo</label>
-            <select id="deporte_articulo" >
+            <select id="deporte_articulo" name="deporte_articulo">
                 <option value="" selected></option>
                 <option value="todos">Todos</option>
                 <option value="ropa">Ropa</option>
