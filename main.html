@@ -54,17 +54,18 @@
     </div>
 
     <div id="modalLogin" class="modal">
-        <form id="formLoginModal" class="formLoginModal">
+        <form id="formLoginModal" action="assets/php/checklogin.php" method="post" class="formLoginModal">
             <div class="container">
                 <label for="usuarioLogin">Usuario</label>
-                <input id="usuarioLogin" type="text" placeholder="usuario" required />
+                <input id="usuarioLogin" name="usuarioLogin" type="text" placeholder="usuario" required />
                 <br/>
                 <label for="contraseñaLogin">Contraseña</label>
-                <input id="contraseñaLogin" type="password" placeholder="contraseña" required/>
+                <input id="contraseñaLogin" name="contraseñaLogin" type="password" placeholder="contraseña" required/>
                 <br/>
-                <input type="button" value="Login" onclick="checkFormLogin()">
+                <!--<input type="button" value="Login" >-->
+                <input type="submit" name="Submit" value="LOGIN">
                 <!--<button id="btnLogin" onclick="check()">Login</button>-->
-                <input type="checkbox" checked="checked"/> Remember me
+                <span class="right"><input type="checkbox" checked="checked"/> Remember me </span>
             </div>
             <div class="container" style="background-color:#f1f1f1">
                 <button id="btnCancelarLogin" type="button" class="cancelbtn" onclick="cancelFormularioLogin()">Cancel</button>
