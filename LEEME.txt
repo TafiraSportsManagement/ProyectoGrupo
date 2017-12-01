@@ -30,3 +30,8 @@ hemos propocionado a cada uno de ellos:
 
 
     sql/        -> contiene el fichero que define nuestra base de datos.
+
+
+En la raíz de nuestro proyecto además del "main.html" y diversas páginas HTML se encuentra "resultados.html"  que  es  la
+página que utilizamos para mostrar los resultados en la fase en la que aún no teniamos "conexión" con un  servidor  y  nos
+servía para mostrar la respuesta simulada a través de Ajax.
