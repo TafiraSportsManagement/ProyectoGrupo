@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-11-2017 a las 22:50:51
+-- Tiempo de generación: 30-11-2017 a las 23:02:27
 -- Versión del servidor: 5.6.37
 -- Versión de PHP: 7.1.8
 
@@ -20,7 +20,11 @@ SET time_zone = "+00:00";
 -- Base de datos: `TiendaTafiraSport`
 --
 
--- --------------------------------------------------------
+-- CREATE DATABASE IF NOT EXISTS TiendaTafiraSport;
+
+USE TiendaTafiraSport;
+
+
 
 --
 -- Estructura de tabla para la tabla `deporte`

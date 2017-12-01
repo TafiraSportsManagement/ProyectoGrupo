@@ -23,8 +23,10 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
--- USE TiendaTafiraSport;
+CREATE DATABASE IF NOT EXISTS TiendaTafiraSport2;
+--
+USE TiendaTafiraSport2;
+------------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `deporte`
@@ -103,9 +105,9 @@ CREATE TABLE `item` (
 --
 
 CREATE TABLE `producto` (
-  `id_producto` int(11) NOT NULL AUTO_INCREMENT,
+  `id_producto` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `id_tipopro` int(11) NOT NULL,
-  `marca` int(11) NOT NULL,
+  `marca` varchar(20) NOT NULL,
 
   `modelo` varchar(20) NOT NULL,
   -- Los siguientes valores en caso del calzado se corresponden con el 'numero' y para otros productos
@@ -120,7 +122,6 @@ CREATE TABLE `producto` (
   `nombre` varchar(20) NOT NULL,
   `precio` varchar(10) NOT NULL,
 
-  PRIMARY KEY(id_producto),
   FOREIGN KEY (id_tipopro) REFERENCES tipoproducto(id_tipopro),
   FOREIGN KEY (marca) REFERENCES marca(nombre)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -142,17 +143,16 @@ INSERT INTO producto (`id_tipopro`, `marca`, `nombre`, `modelo`, `tallaminima`, 
 -- Estructura de tabla para la tabla `marca`
 --
 CREATE TABLE `marca` {
-    `id_marca` int(11) NOT NULL AUTO_INCREMENT,
-    `nombre` varchar(10) NOT NULL,
-    PRIMARY KEY(nombre)
+    `id_marca` int(11) NOT NULL,
+    `nombre` varchar(10) NOT NULL PRIMARY KEY
 } ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `marca` (`nombre`) VALUES
-('adidas'),
-('nike'),
-('mizuno'),
-('puma'),
-('asics');
+(1, 'adidas'),
+(2, 'nike'),
+(3, 'mizuno'),
+(4, 'puma'),
+(5, 'asics');
 
 
 -- --------------------------------------------------------
