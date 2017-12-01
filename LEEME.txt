@@ -1,2 +1,32 @@
 # ProyectoGrupo - TiendaTafiraSport
 
+Este proyecto web consiste en una tienda de deportes 'online'. El punto de entrada a sitio web es la página "main.html",
+que se encuentra en la raíz de nuestro sitio. Donde mismo se encuentran el resto de páginas HTML y este  mismo  fichero.
+En aquellos puntos donde hacemos uso de  código  de  terceros  lo  indicamos  como  por  ejemplo:  "pro_dropdown_3.css",
+"stuHover.js", la función "leerCookie()" que se encuentra en "ajax.js", ...
+
+Nuestro código lo hemos estructurado en una serie de directorios que son bastante autoexplicativos por el nombre que le
+hemos propocionado a cada uno de ellos:
+
+    css/        -> contiene nuestras hojas de estilo
+    imagenes/   -> contiene las imagenes estáticas utilizadas
+    js/         -> nuestros ficheros Javascript
+
+                   El fichero, por decirlo de alguna forma, principal es "main.js".
+                   En "ajax.js" se encuentra el código asocido al mismo que utilizamos en la segunda exposición del proyecto.
+
+    media/      -> para las imágenes no estáticas
+    php/        -> nuestro código PHP
+
+                   El fichero "config.php" contiene la configuración de la conexión a BBDD.
+
+                   Los ficheros "respuestaTexto.php" y "respuestaXML.php" fueron utilizados en la segunda exposición del proyecto
+                   para simular la respuesta desde el servidor haciendo uso de Ajax. Inicialmente nuestra intención fue hacer uso
+                   del XML pero al obtener "null" en la "xmlHttpRequest.responseXML" utilizamos la respuesta de texto.
+
+                   La página "resultados.php" mostrara el resultado de la consulta del formulario asociado a nuestro sitio haciendo
+                   uso del objeto de conexión a BBDD que definimos en la clase "resultados.class.php". Para hacer esto utilizamos
+                   un "resultados_header" y un "resultados_footer" en PHP que simplemente envuelven un código HTML.
+
+
+    sql/        -> contiene el fichero que define nuestra base de datos.
