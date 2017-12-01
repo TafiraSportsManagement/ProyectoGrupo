@@ -19,6 +19,7 @@ hemos propocionado a cada uno de ellos:
     php/        -> nuestro código PHP
 
                    El fichero "config.php" contiene la configuración de la conexión a BBDD.
+                   NOTA: Considerar el nombre de la base de datos cuando sea creada e importada, es decir, si está en mayúsculas o minúsculas.
 
                    Los ficheros "respuestaTexto.php" y "respuestaXML.php" fueron utilizados en la segunda exposición del proyecto
                    para simular la respuesta desde el servidor haciendo uso de Ajax. Inicialmente nuestra intención fue hacer uso
@@ -35,3 +36,19 @@ hemos propocionado a cada uno de ellos:
 En la raíz de nuestro proyecto además del "main.html" y diversas páginas HTML se encuentra "resultados.html"  que  es  la
 página que utilizamos para mostrar los resultados en la fase en la que aún no teniamos "conexión" con un  servidor  y  nos
 servía para mostrar la respuesta simulada a través de Ajax.
+
+
+
+#CARRITO
+
+El carrito ha sido un código obtenido de la web y adaptado a nuestras necesidades.
+
+Consta de tres páginas:
+
+- cart.html: En esta página el cliente puede ver sus compras, eliminar o añadir objetos, el precio total del pedido, etc.
+- checkout.html: Aquí el cliente rellena los datos correspondientes al usuario que hace el pedido y a dónde se envía dicho pedido.
+- order.html: Finalmente,en esta página el cliente verifica sus datos y realiza la compra, siendo redirigido a una página de PayPal donde meter sus datos
+              y realizar el pago de su pedido.
+
+Estas páginas están apoyadas por los ficheros jquery.shop.js y jquery.min.js, donde este último es llamado desde la web.
+En el primero están todos los métodos referentes para obtener los datos que se requieren en cada página.
