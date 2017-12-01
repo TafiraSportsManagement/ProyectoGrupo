@@ -13,7 +13,7 @@ hemos propocionado a cada uno de ellos:
     js/         -> nuestros ficheros Javascript
 
                    El fichero, por decirlo de alguna forma, principal es "main.js".
-                   En "ajax.js" se encuentra el código asocido al mismo que utilizamos en la segunda exposición del proyecto.
+                   En "ajax.js" se encuentra el código asociado al mismo que utilizamos en la segunda exposición del proyecto.
 
     media/      -> para las imágenes no estáticas
     php/        -> nuestro código PHP
@@ -25,7 +25,7 @@ hemos propocionado a cada uno de ellos:
                    del XML pero al obtener "null" en la "xmlHttpRequest.responseXML" utilizamos la respuesta de texto.
 
                    La página "resultados.php" mostrara el resultado de la consulta del formulario asociado a nuestro sitio haciendo
-                   uso del objeto de conexión a BBDD que definimos en la clase "resultados.class.php". Para hacer esto utilizamos
+                   uso del objeto de conexión a BBDD que definimos en la clase "resultados.class.php". Para hacer  esto  utilizamos
                    un "resultados_header" y un "resultados_footer" en PHP que simplemente envuelven un código HTML.
 
 
