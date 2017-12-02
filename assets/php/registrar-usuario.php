@@ -8,7 +8,8 @@
 
  $form_pass = $_POST['contraseña'];
 
- $hash = password_hash($form_pass, PASSWORD_BCRYPT);
+
+ $hash = password_hash($form_pass, PASSWORD_DEFAULT);
 
  $conexion = new mysqli($host_db, $user_db, $pass_db, $db_name);
 
