@@ -32,10 +32,10 @@ $hash = password_hash($form_pass, PASSWORD_DEFAULT);
  $query = "INSERT INTO user (usuario, password, apellidos, cp, email, nombre, pais, telefono) VALUES ('$_POST[usuario]', '$hash', '$_POST[apellidos]', '$_POST[cp]', '$_POST[email]', '$_POST[nombre]', '$_POST[pais]', '$_POST[telefono]')";
 
  if ($conexion->query($query) === TRUE) {
- echo "Form Submitted succesfully";
-// echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
-// echo "<h4>" . "Bienvenido: " . $_POST['usuario'] . "</h4>" . "\n\n";
-// echo "<h5>" . "Hacer Login: " . "<a href=../../main.html>Página Principal</a>" . "</h5>";
+
+ echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
+ echo "<h4>" . "Bienvenido: " . $_POST['usuario'] . "</h4>" . "\n\n";
+ echo "<h5>" . "Hacer Login: " . "<a href=../../main.html>Página Principal</a>" . "</h5>";
  }
 
  else {
