@@ -72,7 +72,7 @@ $("#formLoginModal").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "php/checkLogin.php",
+        url: "php/checklogin.php",
         type: "post",
         data: serializedData
     });
