@@ -22,7 +22,7 @@ $(document).ready(function(){
         // AJAX Code To Submit Form.
             $.ajax({
                 type: "POST",
-                url: "php/registerNewUser.php",
+                url: "php/registrar-usuario.php",
                 data: dataString,
                 cache: false,
                 success: function(result){
