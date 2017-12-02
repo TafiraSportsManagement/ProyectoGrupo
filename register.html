@@ -8,10 +8,8 @@
     <title>Tienda de deportes</title>
     <!--Normaliza todos los navegadores-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/register.css">
-
 </head>
 
 <body>
@@ -32,7 +30,7 @@
 <section id="seccionRegistro" class="seccionRegistro">
     <fieldset>
         <legend>Registro</legend>
-        <form id="formRegistro">
+        <form id="formRegistro" action="assets/php/registrar-usuario.php" method="post">
             <label for="usuario">Usuario</label>
             <input id="usuario"type="text" placeholder="usuario" name="usuario" required />
             <br/>
@@ -71,8 +69,7 @@
             <input id="email" type="text" placeholder="email" name="email" required />
             <br/>
             <br/>
-            <!--<input type="submit" name="submit" value="Aceptar"/>-->
-            <input type="submit" id="submit" value="Submit"/>
+            <input type="submit" name="submit" value="Aceptar"/>
         </form>
     </fieldset>
 </section>
@@ -88,10 +85,9 @@
         <a id="ultimo" href="#">Twitter</a>
         <!-- TODO: incluir iconos asociados a las "redes sociales" de la tienda -->
     </nav>
-    <!--<script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>-->
+    <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/registro.js" language="JavaScript" type="text/javascript"></script>
     <!--<script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>-->
-    <script src="assets/js/ajaxRegistro.js"></script>
 </footer>
 </body>
 </html>
