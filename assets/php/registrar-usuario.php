@@ -43,6 +43,7 @@ $hash = password_hash($form_pass, PASSWORD_DEFAULT);
  echo "Error al crear el usuario." . $query . "<br>" . $conexion->error;
    }
  }
+
  mysqli_close($conexion);
 ?>
 
