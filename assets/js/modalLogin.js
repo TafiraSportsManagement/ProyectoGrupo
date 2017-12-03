@@ -3,21 +3,7 @@ var btnCancelLogin = document.getElementById("btnCancelarLogin");
 var userLogin = document.forms["formLoginModal"]["usuarioLogin"];
 var userPass = document.forms["formLoginModal"]["contraseñaLogin"];
 
-function checkFormLogin(){
-    /*function to check userid & password*/
 
-
-    /*the following code checkes whether the entered userid and password are matching*/
-    if(userLogin.value == "123" && userPass.value == "123")
-    {
-        /*opens the target page while Id & password matches*/
-        onValidarFormularioLogin();
-    }
-    else
-    {
-        alert("Error Password or Username")/*displays error message*/
-    }
-}
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -46,4 +32,3 @@ function cancelFormularioLogin() {
 
 }
 btnCancelLogin.addEventListener('click', cancelFormularioLogin, false);
-

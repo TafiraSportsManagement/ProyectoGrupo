@@ -83,7 +83,7 @@ class Resultados {
 			$calificaSQL = $calificaSQL.' AND nombre="'. $_nombre_ . '"';
 		}
 
-		echo '<br/><br/>Consulta: '.$sql.$calificaSQL.'<br/>';
+//		echo '<br/><br/>Consulta: '.$sql.$calificaSQL.'<br/>';
 
 
         if ( $_opcion_ == 'ropa' || $_opcion_ == 'calzado' ) {
@@ -105,7 +105,7 @@ class Resultados {
 
         }
 
-		echo '<br/>Numero de filas: '.$query->num_rows.'<br/>';
+//		echo '<br/>Numero de filas: '.$query->num_rows.'<br/>';
 
 		return $query;
 

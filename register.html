@@ -6,8 +6,6 @@
           content="IE=edge,chrome=1">
     <meta name="description" content="Proyecto Grupo">
     <title>Tienda de deportes</title>
-    <!--Normaliza todos los navegadores-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/register.css">
 </head>
@@ -30,32 +28,32 @@
 <section id="seccionRegistro" class="seccionRegistro">
     <fieldset>
         <legend>Registro</legend>
-        <form id="formRegistro" onsubmit="validateForm()">
+        <form id="formRegistro" action="assets/php/registrar-usuario.php" method="post">
             <label for="usuario">Usuario</label>
-            <input id="usuario" type="text" placeholder="usuario" required />
+            <input id="usuario"type="text" placeholder="usuario" name="usuario" required />
             <br/>
             <label for="contraseña">Contraseña</label>
-            <input id="contraseña" type="password" placeholder="contraseña" required />
+            <input id="contraseña" type="password" placeholder="contraseña" name="contraseña" required />
             <br/>
             <label for="repContraseña">Repetir contraseña</label>
-            <input id="repContraseña" type="password" placeholder="repetir contraseña" required />
+            <input id="repContraseña" type="password" placeholder="repetir contraseña" name="repetirContraseña"required />
             <br/>
             <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" placeholder="nombre" required />
+            <input id="nombre" type="text" placeholder="nombre" name="nombre" required />
             <br/>
             <label for="apellidos">Apellidos</label>
-            <input id="apellidos" type="text" placeholder="apellidos" required />
+            <input id="apellidos" type="text" placeholder="apellidos" name="apellidos"required />
             <br/>
             <label for="telefono">Teléfono</label>
-            <input id="telefono" type="text" placeholder="teléfono" required />
+            <input id="telefono" type="text" placeholder="teléfono" name="telefono" required />
             <br/>
             <label for="direccion">Dirección</label>
-            <input id="direccion" type="text" placeholder="dirección" required />
+            <input id="direccion" type="text" placeholder="dirección" name="direccion" required />
             <br/>
             <label for="pais">País</label>
             <select id ="pais" name="pais">
                 <option selected="" value="Default">Selecciona un país</option>
-                <option value="ES">España</option>
+                <option value="ESPAÑA">España</option>
                 <option value="AL">Canada</option>
                 <option value="DZ">India</option>
                 <option value="AS">Russia</option>
@@ -63,10 +61,10 @@
             </select>
             <br/>
             <label for="codigoPostal">Código Postal</label>
-            <input id="codigoPostal" type="text" placeholder="código postal" required />
+            <input id="codigoPostal" type="text" placeholder="código postal" name="codigoPostal" required />
             <br/>
             <label for="email">Email</label>
-            <input id="email" type="text" placeholder="email" required />
+            <input id="email" type="text" placeholder="email" name="email" required />
             <br/>
             <br/>
             <input type="submit" name="submit" value="Aceptar"/>
@@ -87,7 +85,6 @@
     </nav>
     <script src="assets/js/seleccion.js" language="JavaScript" type="text/javascript"></script>
     <script src="assets/js/registro.js" language="JavaScript" type="text/javascript"></script>
-    <!--<script src="assets/js/main.js" language="JavaScript" type="text/javascript"></script>-->
 </footer>
 </body>
 </html>

@@ -18,7 +18,7 @@ echo '<!DOCTYPE html>
 <header>
     <div class="titulo">
         <div class="logo">
-            <a href="main.html">
+            <a href="../../main.html">
                 <img src="./../imagenes/002-basketball.png" height="70" width="70"/>
             </a>
         </div>
@@ -93,7 +93,7 @@ echo '<!DOCTYPE html>
 
     <ul id="nav">
         <li class="top">
-            <a href="main.html" class="top_link"><span>Inicio</span></a>
+            <a href="../../main.html" class="top_link"><span>Inicio</span></a>
         </li>
     </ul>
 
