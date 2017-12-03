@@ -29,7 +29,8 @@ $hash = password_hash($form_pass, PASSWORD_DEFAULT);
  }
  else{
 
- $query = "INSERT INTO user (usuario, password, apellidos, cp, email, nombre, pais, telefono) VALUES ('$_POST[usuario]', '$hash', '$_POST[apellidos]', '$_POST[cp]', '$_POST[email]', '$_POST[nombre]', '$_POST[pais]', '$_POST[telefono]')";
+ $query = "INSERT INTO user (usuario, password, apellidos, cp, email, nombre, pais, telefono)
+ VALUES ('$_POST[usuario]', '$hash', '$_POST[apellidos]', '$_POST[codigoPostal]', '$_POST[email]', '$_POST[nombre]', '$_POST[pais]', '$_POST[telefono]')";
 
  if ($conexion->query($query) === TRUE) {
 
