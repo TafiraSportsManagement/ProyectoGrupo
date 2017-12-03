@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `cp` varchar(20) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `usuario` varchar(30) DEFAULT NULL,
-  `password` varchar(30) DEFAULT NULL
+  `password` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
