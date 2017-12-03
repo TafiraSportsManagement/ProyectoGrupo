@@ -40,34 +40,6 @@ echo '<section class="row" id="seccionContenedores">
         </script>
     </article>
 
-    <div id="site">
-    <div id="content">
-        <div id="products">
-            <ul>
-                <li>
-                    <div class="product-image">
-                        <img src="./../imagenes/wine1.jpg" alt="" />
-                    </div>
-                    <div class="product-description" data-name="Wine #1" data-price="5">
-                        <h3 class="product-name">Vino Coto</h3>
-                        <p class="product-price">&euro; 5</p>
-                        <form class="add-to-cart" method="post">
-                            <div>
-                                <label for="qty-1">Cantidad</label>
-                                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-                            </div>
-                            <p><input type="submit" value="Add to cart" class="btn" onclick="checkFormCarrito()"/></p>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </div>
-
-
-</section>
-
 
 <footer>
     <nav class="botnav">

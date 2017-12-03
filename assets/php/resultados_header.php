@@ -93,7 +93,7 @@ echo '<!DOCTYPE html>
 
     <ul id="nav">
         <li class="top">
-            <a href="main.html" class="top_link"><span>Inicio</span></a>
+            <a href="../../main.html" class="top_link"><span>Inicio</span></a>
         </li>
     </ul>
 

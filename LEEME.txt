@@ -30,14 +30,27 @@ hemos propocionado a cada uno de ellos:
                    un "resultados_header" y un "resultados_footer" en PHP que simplemente envuelven un código HTML.
 
 
-    sql/        -> contiene el fichero que define nuestra base de datos.
+    sql/        -> contiene el fichero que define nuestra base de datos. El fichero final es TiendaTafiraSport
 
 
 En la raíz de nuestro proyecto además del "main.html" y diversas páginas HTML se encuentra "resultados.html"  que  es  la
 página que utilizamos para mostrar los resultados en la fase en la que aún no teniamos "conexión" con un  servidor  y  nos
 servía para mostrar la respuesta simulada a través de Ajax.
 
+#REGISTRO
+Es una página html con comunicación a nuestra base de datos a través de un fichero PHP.
+Esta paginá/formulario ofrece validación con javascript, que en ningun caso podremos ejecutar el ingreso a la base de datos sin antes haber
+rellenado el formulario por completo.
+La llamada al fichero registrar-usuario.php ingresa en nuestra base de datos el usuario creado con los datos del formulario,
+para asi poder hacer la validación posterior en el login.
+Lleva cierta seguridad ya que a la base de datos la contraseña introducida se le aplica una función de PHP que encripta el valor introducido.
+La respuesta sera valida si el usuario se ha creado correctamente.
 
+#Login
+Nuestro Login es un formulario modal, ejecutado por javascript una vez clicamos sobre él en el header de la pagina main.html
+Este formulario comprueba a través de checklogin.php si el usuario ingresado existe en nuestra base de datos.
+
+#NAV-BAR
 
 #CARRITO
 
