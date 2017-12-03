@@ -51,7 +51,8 @@ Nuestro Login es un formulario modal, ejecutado por javascript una vez clicamos 
 Este formulario comprueba a través de checklogin.php si el usuario ingresado existe en nuestra base de datos.
 
 #NAV-BAR
-
+Es la barra que nos permite navegar por los diferentes productos de nuestra tienda, es us una búsqueda mediante php en la que se usa las respuestasXML.php
+y los resutados_footer.php y resultados_header.php.
 #CARRITO
 
 El carrito ha sido un código obtenido de la web y adaptado a nuestras necesidades.
