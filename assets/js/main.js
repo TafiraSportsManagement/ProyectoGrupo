@@ -6,7 +6,6 @@ var seccionSeleccion = document.getElementById("seccionSeleccion");
 var leyendaSeleccion = document.getElementById("leyendaSeleccion");
 
 var formSeleccion = document.getElementById("formSeleccion");
-//var submitFormSeleccion = document.getElementById("submitFormSeleccion");
 var divRopa = document.getElementById("ropa"),
     divCalzado = document.getElementById("calzado"),
     divAccesorios = document.getElementById("accesorios");
@@ -46,7 +45,6 @@ function mostrarFormularioLogin(event) {
 log.addEventListener('click', mostrarFormularioLogin, false);
 
 function mostrarCarritoModal(){
-    console.log("mostrarCarritoModal");
     modalCarrito.style.display = "block";
 }
 
@@ -54,7 +52,6 @@ carrito.addEventListener('click', mostrarCarritoModal, false);
 
 
 function iraFormulario(elemento) {
-    // console.log("iraFormulario");
 
     ulContenedor = elemento.parentNode.parentNode;
     opcionMenu = elemento.innerHTML.toLowerCase();
@@ -62,10 +59,6 @@ function iraFormulario(elemento) {
     /* Guardamos la 'cookie'*/
     document.cookie = "navegacion="+ulContenedor.id;
     document.cookie = "opcion="+opcionMenu;
-
-
-    console.log("elemento.value -> opcionMenu: " + opcionMenu + ", elemento.padre.padre( ulContenedor.id ): " + ulContenedor.id);
-    // console.log("tipo_ropa innerHTML: " + document.getElementById("tipo_ropa").innerHTML);
 
     /**/
 
@@ -102,8 +95,6 @@ function iraFormulario(elemento) {
 
     seccionSeleccion.style.display = "block";
 
-    /**/
-
 }
 
 function selectCheckValidity() {
@@ -112,14 +103,12 @@ function selectCheckValidity() {
 
 function validaFormularioDeportes(event) {
 
-    // console.log("validaFormularioDeportes");
 
     if ( ! selectCheckValidity() ) {
         // event.preventDefault();
 
         elementoSelect.setCustomValidity('Este campo es obligatorio');
     } else {
-        // console.log("formDeportes.submit");
         elementoSelect.setCustomValidity('');
 
         formDeportes.submit;
@@ -131,9 +120,7 @@ enviarSeleccionDeportes.addEventListener('click', validaFormularioDeportes, fals
 
 
 function validaFormulario(event) {
-    console.log("validaFormulario");
 
-    /**/
     var error = false;
 
     var tipo = document.getElementById("tipo_"+opcionMenu),
