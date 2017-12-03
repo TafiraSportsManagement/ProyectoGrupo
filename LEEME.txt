@@ -30,7 +30,7 @@ hemos propocionado a cada uno de ellos:
                    un "resultados_header" y un "resultados_footer" en PHP que simplemente envuelven un código HTML.
 
 
-    sql/        -> contiene el fichero que define nuestra base de datos. El fichero final es TiendaTafiraSport
+    sql/        -> contiene el fichero que define nuestra base de datos.
 
 
 En la raíz de nuestro proyecto además del "main.html" y diversas páginas HTML se encuentra "resultados.html"  que  es  la
