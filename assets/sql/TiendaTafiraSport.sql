@@ -17,12 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `TiendaTafiraSport`
+-- Base de datos: `tiendatafirasport`
 --
 
--- CREATE DATABASE IF NOT EXISTS TiendaTafiraSport;
-
-USE TiendaTafiraSport;
+CREATE DATABASE IF NOT EXISTS tiendatafirasport;
+--
+USE tiendatafirasport;
 
 
 
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `cp` varchar(20) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `usuario` varchar(30) DEFAULT NULL,
-  `contraseña` varchar(30) DEFAULT NULL
+  `password` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -283,7 +283,7 @@ ALTER TABLE `tipoproducto`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
-  ADD KEY `usuario` (`usuario`,`contraseña`);
+  ADD KEY `usuario` (`usuario`,`password`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
