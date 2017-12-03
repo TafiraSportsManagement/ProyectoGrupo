@@ -29,33 +29,35 @@ function validateForm(){
     if(usuario.length == 0 || usuario.search(/[0-9]/) < 1){
         usuario.setCustomValidity("Introduzca usuario valido");
         return false;
-    }if(validatePass()){
+    }else if(validatePass()){
         return false;
-    }if(contraseña.value != repContraseña.value){
+    }else if(contraseña.value != repContraseña.value){
         repContraseña.setCustomValidity("Contraseñas no coinciden");
         return false;
-    }if(nombre.length == 0){
+    }else if(nombre.length == 0){
         nombre.setCustomValidity(alerta);
         return false;
-    }if(apellidos.length == 0){
+    }else if(apellidos.length == 0){
         apellidos.setCustomValidity(alerta);
         return false;
-    }if(tfn.length < 9 || tfn.search(/[0-9]/) < 9){
+    }else if(tfn.length < 9 || tfn.search(/[0-9]/) < 9){
         tfn.setCustomValidity("Introduzca un telefono valido");
         return false;
-    }if(direccion == 0){
+    }else if(direccion == 0){
         direccion.setCustomValidity(alerta);
         return false;
-    }if(pais.value == ""){
+    }else if(pais.value == ""){
         pais.setCustomValidity("Seleccione su pais");
         return false;
-    }if(cp.length < 5 || cp.search(/[0-9]/) < 5){
+    }else if(cp.length < 5 || cp.search(/[0-9]/) < 5){
         cp.setCustomValidity("Introduzca un codigo postal valido");
         return false;
-    }if(email.search(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/) < 1){
+    }else if(email.search(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/) < 1){
         email.setCustomValidity("Introduzca un email valido");
         return false;
+    }else{
+        return true;
     }
-    return true;
+
 
 }

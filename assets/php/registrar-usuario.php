@@ -25,7 +25,7 @@ $hash = password_hash($form_pass, PASSWORD_DEFAULT);
  if ($count == 1) {
  echo "<br />". "El Nombre de Usuario ya ha sido tomado." . "<br />";
 
- echo "<a href=../../register.html>Por favor escoga otro Nombre</a>";
+ echo "<a href=../../register.html>Por favor escoja otro Nombre</a>";
  }
  else{
 
